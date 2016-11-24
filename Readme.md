@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алексей Харитонов](https://up.htmlacademy.ru/adaptive/9/user/184645).
-* Наставник: [Юлия Плонина](https://htmlacademy.ru/profile/id64655).
+* Наставник: [](https://htmlacademy.ru/profile/id64655).
 
 ---
 
