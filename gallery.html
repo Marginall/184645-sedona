@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML Academy: Седона</title>
+    <title>Галерея</title>
   </head>
   <body>
     <div class="page-wrapper">
@@ -16,17 +16,17 @@
             <li class="main-nav__item">Форма отзыва</li>
             <li class="main-nav__item">HTML academy</li>
           </ul>
-          <button class="nav-btn--close" type="button"></button>
+          <button class="nav-btn nav-btn--close" type="button"></button>
         </nav>
-        <div class="header-logo"><img src="http://placehold.it/102x83" width="102" height="83" alt="Sedona Logo"></div>
+        <div class="header-logo"><a class="header-logo__link" href="index.html"><img src="http://placehold.it/102x83" width="102" height="83" alt="Sedona Logo"></a></div>
         <button class="nav-btn--show" type="button"></button>
       </header>
       <main class="gallery-page gallery">
-        <div class="gallery__poster"></div>
-        <div class="inner-container">
-          <h1 class="gallery__title">Фото и видео</h1>
-          <p class="gallery-text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-        </div>
+        <section class="intro-block">
+          <div class="intro-block__poster"><img src="http://placehold.it/320x160" width="320" height="160" alt="Картинка Sedona"></div>
+          <h1 class="intro-block__title">Фото и видео</h1>
+          <p class="intro-block-text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        </section>
         <div class="inner-container gallery-item">
           <figure class="gallery-item__img">
             <img src="http://placehold.it/280x280" width="280" height="280" alt="Картинка">
@@ -72,13 +72,13 @@
         </div>
       </main>
       <footer class="page-footer">
-        <div class="page-footer__logo">#visitSEDONA</div>
-        <div class="footer-social">
-          <div class="footer-social__item twit"></div>
-          <div class="footer-social__item fb"></div>
-          <div class="footer-social__item youtube"></div>
-        </div>
-        <div class="page-footer__copyright">Разработано</div>
+        <p class="page-footer__text">#visitSEDONA</p>
+        <ul class="social-list">
+          <li class="social__item"><a class="social__link social__link--twit" href="#"></a></li>
+          <li class="social__item"><a class="social__link social__link--fb" href="#"></a></li>
+          <li class="social__item"><a class="social__link social__link--youtube" href="#"></a></li>
+        </ul>
+        <a class="page-footer__copyright" href="htmlacademy.ru">Разработано</a>
       </footer>
     </div>
   </body>
