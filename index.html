@@ -2,7 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная</title>
   </head>
   <body>
     <div class="page-wrapper">
@@ -14,71 +16,73 @@
             <li class="main-nav__item">Форма отзыва</li>
             <li class="main-nav__item">HTML academy</li>
           </ul>
-          <button class="nav-btn--close" type="button"></button>
+          <button class="nav-btn nav-btn--close" type="button"></button>
         </nav>
-        <div class="header-logo"><img src="http://placehold.it/102x83" width="102" height="83" alt="Sedona Logo"></div>
+        <div class="header-logo"><a class="header-logo__link"><img src="http://placehold.it/102x83" width="102" height="83" alt="Sedona Logo"></a></div>
         <button class="nav-btn--show" type="button"></button>
       </header>
       <main class="main-page">
-        <section class="promo-block">
-          <div class="promo-block__poster"></div>
-          <h1 class="promo-block__title">СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!</h1>
-          <p class="promo-block__inner-text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+        <section class="intro-block">
+          <div class="intro-block__poster"><img src="http://placehold.it/320x390" width="320" height="390" alt="Картинка Sedona"></div>
+          <h1 class="intro-block__title">СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!</h1>
+          <p class="intro-block__inner-text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
         </section>
         <section class="features">
           <h2 class="features__title">Настоящий городок</h2>
-          <div class="features__number">№1</div>
+          <div class="features__number"><span>№1</span></div>
           <p class="features__text">Седонна не аттракцион для туристов, там течет своя жизнь</p>
-          <div class="features__image"></div>
-          <div class="features__item">
-            <div class="features__item-title">Жилье</div>
-            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-          </div>
-          <div class="features__item">
-            <div class="features__item-title">Сувениры</div>
-            <p>Не только китайского, но и местного производства!</p>
-          </div>
-          <div class="features__item">
-            <div class="features__item-title">Еда</div>
-            <p>Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
-          </div>
+          <div class="features__image"><img src="http://placehold.it/320x260" width="320" height="260" alt="Картинка"></div>
+          <ul class="features-list">
+            <li class="features-list__item features-list__item--icon">
+              <h3 class="features-list__title">Жилье</h3>
+              <p class="features-list__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </li>
+            <li class="features-list__item features-list__item--icon">
+              <h3 class="features-list__title">Сувениры</h3>
+              <p class="features-list__text">Не только китайского, но и местного производства!</p>
+            </li>
+            <li class="features-list__item features-list__item--icon">
+              <h3 class="features-list__title">Еда</h3>
+              <p class="features-list__text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+            </li>
+          </ul>
         </section>
-        <section class="features">
+        <section class="features features--color">
           <h2 class="features__title">Там есть мост дьявола</h2>
-          <div class="features__number">№2</div>
+          <div class="features__number"><span>№2</span></div>
           <p class="features__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-          <div class="features__image"></div>
+          <div class="features__image"><img src="http://placehold.it/320x260" width="320" height="260" alt="Картинка"></div>
         </section>
-        <section class="features">
+        <section class="features features--color">
           <h2 class="features__title">Небольшая площадь</h2>
-          <div class="features__number">№3</div>
+          <div class="features__number"><span>№3</span></div>
           <p class="features__text">ВСЕ достопримечательности находятся очень близко</p>
         </section>
-        <section class="features">
+        <section class="features features--color">
           <h2 class="features__title">Красивая дорога</h2>
-          <div class="features__number">№4</div>
+          <div class="features__number"><span>№4</span></div>
           <p class="features__text">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
         </section>
-        <section class="features">
+        <section class="features features--color">
           <h2 class="features__title">Мало туристов</h2>
-          <div class="features__number">№5</div>
+          <div class="features__number"><span>№5</span></div>
           <p class="features__text">Большинство едет в гранд каньон и толпится там</p>
         </section>
         <section class="hotels-search">
           <h2 class="hotels-search__title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
-          <p class="hotels-search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <button class="hotels-btn" type="button">Найти гостиницу</button>
+          <p class="hotels-search__text"><a class="hotels-search__link" href="#">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</a></p>
+          <button class="btn hotels-btn" type="button">Найти гостиницу</button>
         </section>
         <div class="map"></div>
       </main>
       <footer class="page-footer">
-        <div class="page-footer__logo">#visitSEDONA</div>
-        <div class="footer-social">
-          <div class="footer-social__item twit"></div>
-          <div class="footer-social__item fb"></div>
-          <div class="footer-social__item youtube"></div>
-        </div>
-        <div class="page-footer__copyright">Разработано</div>
+        <p class="page-footer__text">#visitSEDONA</p>
+        <ul class="social-list">
+          <li class="social__item"><a class="social__link social__link--twit" href="#"></a></li>
+          <li class="social__item"><a class="social__link social__link--fb" href="#"></a></li>
+          <li class="social__item"><a class="social__link social__link--youtube" href="#"></a></li>
+        </ul>
+        <a class="page-footer__copyright" href="htmlacademy.ru">Разработано</a>
       </footer>
     </div>
   </body>
