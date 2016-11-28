@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="page-header">
+        <nav class="page-header__nav main-nav main-nav--show">
+          <ul>
+            <li class="main-nav__item">Главная</li>
+            <li class="main-nav__item">Фото и видео</li>
+            <li class="main-nav__item">Форма отзыва</li>
+            <li class="main-nav__item">HTML academy</li>
+          </ul>
+          <button class="nav-btn--close" type="button"></button>
+        </nav>
+        <div class="header-logo"><img src="http://placehold.it/102x83" width="102" height="83" alt="Sedona Logo"></div>
+        <button class="nav-btn--show" type="button"></button>
+      </header>
+      <main class="gallery-page gallery">
+        <div class="gallery__poster"></div>
+        <div class="inner-container">
+          <h1 class="gallery__title">Фото и видео</h1>
+          <p class="gallery-text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        </div>
+        <div class="inner-container gallery-item">
+          <figure class="gallery-item__img">
+            <img src="http://placehold.it/280x280" width="280" height="280" alt="Картинка">
+            <figcaption class="gallery-item__text">неродные просторы</figcaption>
+          </figure>
+          <p class="gallery-item__author">Автор фото: Борис</p>
+          <div class="gallery-item__likes">1350</div>
+        </div>
+        <div class="inner-container gallery-item">
+          <figure class="gallery-item__img">
+            <img src="http://placehold.it/280x280" width="280" height="280" alt="Картинка">
+            <figcaption class="gallery-item__text">Местная растительность</figcaption>
+          </figure>
+          <p class="gallery-item__author">Автор фото: Сергей</p>
+          <div class="gallery-item__likes">143</div>
+        </div>
+        <div class="inner-container gallery-item">
+          <figure class="gallery-item__img">
+            <img src="http://placehold.it/280x280" width="280" height="280" alt="Картинка">
+            <figcaption class="gallery-item__text">Дорога на север</figcaption>
+          </figure>
+          <p class="gallery-item__author">Автор фото: Петр</p>
+          <div class="gallery-item__likes">96</div>
+        </div>
+        <div class="inner-container gallery-item">
+          <figure class="gallery-item__img">
+            <img src="http://placehold.it/280x280" width="280" height="280" alt="Картинка">
+            <figcaption class="gallery-item__text">Мост дьявола</figcaption>
+          </figure>
+          <p class="gallery-item__author">Автор фото: Антон</p>
+          <div class="gallery-item__likes">254</div>
+        </div>
+        <div class="inner-container">
+          <h2 class="gallery__title">Все еще сомневаетесь?</h2>
+          <p class="gallery__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <video class="gallery-video" width="321" height="201" controls="controls" poster="video/duel.jpg">
+            <source src="#" type='video/ogg; codecs="theora, vorbis"'>
+            <source src="#" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+            <source src="#" type='video/webm; codecs="vp8, vorbis"'>
+            Тег video не поддерживается вашим браузером.
+            <a class="gallery-video__link" href="#">Скачайте видео</a>.
+          </video>
+        </div>
+      </main>
+      <footer class="page-footer">
+        <div class="page-footer__logo">#visitSEDONA</div>
+        <div class="footer-social">
+          <div class="footer-social__item twit"></div>
+          <div class="footer-social__item fb"></div>
+          <div class="footer-social__item youtube"></div>
+        </div>
+        <div class="page-footer__copyright">Разработано</div>
+      </footer>
+    </div>
+  </body>
+</html>
