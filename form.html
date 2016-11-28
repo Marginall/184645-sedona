@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="page-header">
+        <nav class="page-header__nav main-nav main-nav--show">
+          <ul>
+            <li class="main-nav__item">Главная</li>
+            <li class="main-nav__item">Фото и видео</li>
+            <li class="main-nav__item">Форма отзыва</li>
+            <li class="main-nav__item">HTML academy</li>
+          </ul>
+          <button class="nav-btn--close" type="button"></button>
+        </nav>
+        <div class="header-logo"><img src="http://placehold.it/102x83" width="102" height="83" alt="Sedona Logo"></div>
+        <button class="nav-btn--show" type="button"></button>
+      </header>
+      <main class="form-page">
+        <div class="form-page__poster"></div>
+        <h1 class="form-page__title">Оставьте свой отзыв</h1>
+        <p class="form-page__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <form class="form">
+          <fieldset class="form__item">
+            <h2 class="form__title">Представьтесь:</h2>
+            <div class="name-box">
+              <label class="name-box__title" for="form-name">Имя*:</label>
+              <input class="name-box__input" id="form-name" type="text">Петр
+            </div>
+            <div class="name-box">
+              <label class="name-box__title" for="form-surname">Фамилия*:</label>
+              <input class="name-box__input" id="form-surname" type="text">Иванов
+            </div>
+            <div class="name-box">
+              <label class="name-box__title" for="form-patronymic">Отчество*:</label>
+              <input class="name-box__input" id="form-patronymic" type="text">Александрович
+            </div>
+          </fieldset>
+          <fieldset class="form__item">
+            <h2 class="form__title">Контактная информация:</h2>
+            <div class="tel-box">
+              <label class="tel-box__title" for="form-tel">Контактный телефон*:</label>
+              <input class="tel-box__input" id="form-tel" type="tel" placeholder="Введите телефон">
+              <div class="input-error">Ошибка, перепроверьте номер</div>
+            </div>
+            <div class="email-box">
+              <label class="email-box__title" for="form-email">Электронная почта*:</label>
+              <input class="email-box__input" id="form-email" type="email" placeholder="Введите e-mail">
+              <div class="input-error">Ошибка, перепроверьте адресс</div>
+            </div>
+          </fieldset>
+          <fieldset class="form__item">
+            <h2 class="form__title">ВАше Общее впечатление:</h2>
+            <div class="radio-box">
+              <label>Скорее положительное
+                <input class="radio-box__input" type="radio" name="impression" value="yes" checked>
+                <span class="radio-box__indicator"></span>
+              </label>
+              <label>Скорее отрицательное
+                <input class="radio-box__input" type="radio" name="impression" value="no">
+                <span class="radio-box__indicator"></span>
+              </label>
+              <label>Затрудняюсь ответить
+                <input class="radio-box__input" type="radio" name="impression" value="none">
+                <span class="radio-box__indicator"></span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="form__item">
+            <h2 class="form__title">Посещенные достопримечательности:</h2>
+            <div class="checkbox">
+              <label>Мост Дьявола
+                <input class="checkbox__input" type="checkbox" value="1">
+                <span class="radio-box__indicator"></span>
+              </label>
+              <label>Слайд-парк
+                <input class="checkbox__input" type="checkbox" value="2">
+                <span class="radio-box__indicator"></span>
+              </label>
+              <label>Гора-Колокол
+                <input class="checkbox__input" type="checkbox" value="3">
+                <span class="radio-box__indicator"></span>
+              </label>
+              <label>Красные скалы
+                <input class="checkbox__input" type="checkbox" value="4">
+                <span class="radio-box__indicator"></span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="form__item">
+            <h2 class="form__title">Опишите свои эмоции:</h2>
+            <textarea class="form-area" placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+          <button type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+        </form>
+      </main>
+      <footer class="page-footer">
+        <div class="page-footer__logo">#visitSEDONA</div>
+        <div class="footer-social">
+          <div class="footer-social__item twit"></div>
+          <div class="footer-social__item fb"></div>
+          <div class="footer-social__item youtube"></div>
+        </div>
+        <div class="page-footer__copyright">Разработано</div>
+      </footer>
+      <section class="popup-error">
+        <h2 class="popup-error__title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
+        <p class="popup-error__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button type="button">Ok</button>
+      </section>
+      <section class="popup-review-sent">
+        <h2 class="popup-review-sent__title">Ваш отзыв отправлен!</h2>
+        <p class="popup-review-sent__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <button type="button">Закрыть окно</button>
+      </section>
+    </div>
+  </body>
+</html>
