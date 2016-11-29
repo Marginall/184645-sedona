@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Форма</title>
   </head>
-  <body>
+  <body class="page">
     <div class="page-wrapper">
       <header class="page-header">
         <nav class="page-header__nav main-nav main-nav--show">
-          <ul>
+          <ul class="main-nav__list">
             <li class="main-nav__item">Главная</li>
             <li class="main-nav__item">Фото и видео</li>
             <li class="main-nav__item">Форма отзыва</li>
@@ -16,12 +16,12 @@
           </ul>
           <button class="nav-btn nav-btn--close" type="button"></button>
         </nav>
-        <div class="header-logo"><a class="header-logo__link" href="index.html"><img src="http://placehold.it/102x83" width="102" height="83" alt="Sedona Logo"></a></div>
+        <div class="header-logo"><a class="header-logo__link" href="index.html"><img class="header-logo__image" src="http://placehold.it/102x83" width="102" height="83" alt="Sedona Logo"></a></div>
         <button class="nav-btn--show" type="button"></button>
       </header>
       <main class="form-page">
         <section class="intro-block">
-          <div class="intro-block__poster"><img src="http://placehold.it/320x160" width="320" height="160" alt="Картинка Sedona"></div>
+          <div class="intro-block__poster"><img class="intro-block__poster-image" src="http://placehold.it/320x160" width="320" height="160" alt="Картинка Sedona"></div>
           <h1 class="intro-block__title global-title">Оставьте свой отзыв</h1>
           <p class="intro-block__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </section>
@@ -92,7 +92,7 @@
             <h2 class="form__title global-title">Опишите свои эмоции:</h2>
             <textarea class="form-area" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
-          <button class="btn form-btn" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+          <button class="form-btn btn" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
         </form>
       </main>
       <footer class="page-footer">
@@ -107,12 +107,12 @@
       <section class="popup-error">
         <h2 class="popup-error__title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
         <p class="popup-error__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button type="button">Ok</button>
+        <button class="popup-error__btn btn" type="button">Ok</button>
       </section>
       <section class="popup-review-sent">
         <h2 class="popup-review-sent__title">Ваш отзыв отправлен!</h2>
         <p class="popup-review-sent__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-        <button type="button">Закрыть окно</button>
+        <button class="btn popup-review-sent__btn" type="button">Закрыть окно</button>
       </section>
     </div>
   </body>
