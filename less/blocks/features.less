@@ -8,11 +8,6 @@
     padding-bottom: 25px;
     background-color: @grey;
   }
-
-  &--color .features__text {
-    margin-bottom: 0;
-  }
-
   &--font-color {
     color: @white;
   }
@@ -21,8 +16,12 @@
 .features-list__item {
   padding-left: 70px;
   padding-right: 40px;
+
+  &:last-child {
+    margin-bottom: 40px;
+  }
 }
 
-.features-list__item:last-child {
-  margin-bottom: 40px;
+.features__text {
+  margin-bottom: 0;
 }
