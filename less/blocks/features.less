@@ -25,3 +25,47 @@
 .features__text {
   margin-bottom: 0;
 }
+
+@media @tablet-widths {
+  .features {
+    .clearfix();
+    padding: 0;
+  }
+
+  .features--left {
+    float: left;
+  }
+
+  .features__wrapper {
+    float: left;
+    width: 256px;
+    padding: 64px 0;
+  }
+
+  .features__wrapper--right {
+    float: right;
+  }
+
+  .features__image {
+    float: left;
+    width: 512px;
+    height: 256px;
+  }
+
+  .features-list {
+    .clearfix();
+    float: left;
+    width: 100%;
+  }
+
+  .features-list__item {
+    float: left;
+    width: 156px;
+    height: 210px;
+    padding: 60px 50px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
