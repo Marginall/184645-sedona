@@ -50,5 +50,28 @@
 }
 
 @media @tablet-widths {
+  .features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
+    &--small {
+      width: 33%;
+      flex-grow: 1;
+    }
+  }
+
+  .features__wrapper {
+    width: 33%;
+
+    &--color {
+      flex-grow: 1;
+      padding: 47px 50px;
+    }
+  }
+
+  .features__image-block {
+    flex-grow: 1;
+    outline: 1px solid red;
+  }
 }
