@@ -43,6 +43,13 @@
   margin: 0;
 }
 
+.features__image-block {
+  width: 320px;
+  height: 260px;
+  background: transparent url("../../img/photo-city@1x.jpg") no-repeat;
+  background-size: cover;
+}
+
 .features:nth-child(2)  .features__image-block {
   background: transparent url("../../img/photo-4-mobile@1x.jpg") no-repeat;
 }
@@ -76,11 +83,10 @@
   .features__image-block {
     width: 512px;
     height: 256px;
-    background: transparent url("../../img/photo-city@1x.jpg") no-repeat;
-    background-size: contain;
-
-    &--order {
-      order: 2;
-    }
   }
+
+  .features__image-block--order {
+    order: 2;
+  }
+
 }
