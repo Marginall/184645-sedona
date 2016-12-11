@@ -12,7 +12,21 @@
 }
 
 .page-footer__copyright {
+  position: relative;
   display: block;
+  padding-right: 40px;
+
+  &::after {
+    position: absolute;
+    right: 96px;
+    top: -2px;
+    content: "";
+    display: block;
+    width: 29px;
+    height: 35px;
+    background: transparent url("../../img/htmlacademy.svg") no-repeat;
+    background-size: cover;
+  }
 }
 
 @media @tablet-widths {
