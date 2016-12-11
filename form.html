@@ -26,7 +26,7 @@
           <p class="intro-block__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </section>
         <form class="form">
-          <fieldset class="form__item form__item--right">
+          <fieldset class="form__item">
             <h2 class="form__title global-title">Представьтесь:</h2>
             <div class="field-text">
               <label class="field-text__title" for="form-name">Имя<span class="field-text__decoration">*</span>:</label>
@@ -41,8 +41,8 @@
               <input class="field-text__input field-text__input--narrow" id="form-patronymic" type="text" value="Александрович">
             </div>
           </fieldset>
-          <fieldset class="form__item form__item--width">
-            <h2 class="form__title global-title">Контактная информация:</h2>
+          <fieldset class="form__item">
+            <h2 class="form__title form__title--custum global-title">Контактная информация:</h2>
             <div class="field-icon">
               <label class="field-icon__title" for="form-tel">Контактный телефон*:</label>
               <input class="field-icon__input" id="form-tel" type="tel" placeholder="Введите телефон">
@@ -54,7 +54,7 @@
               <p class="input-error">Ошибка, перепроверьте адресс</p>
             </div>
           </fieldset>
-          <fieldset class="form__item form__item--left">
+          <fieldset class="form__item">
             <h2 class="form__title global-title">ВАше Общее впечатление:</h2>
             <label class="form-radio">Скорее положительное
               <input class="form-radio__input" type="radio" name="impression" value="yes" checked>
@@ -69,8 +69,8 @@
               <span class="form-radio__indicator"></span>
             </label>
           </fieldset>
-          <fieldset class="form__item">
-            <h2 class="form__title global-title">Посещенные достопримечательности:</h2>
+          <div class="form__item">
+            <h2 class="form__title form__title--custum form__title--center global-title">Посещенные достопримечательности:</h2>
             <label class="form-checkbox">Мост Дьявола
               <input class="form-checkbox__input" type="checkbox" value="1">
               <span class="form-checkbox__indicator"></span>
@@ -87,12 +87,13 @@
               <input class="form-checkbox__input" type="checkbox" value="4">
               <span class="form-checkbox__indicator"></span>
             </label>
-          </fieldset>
+          </div>
           <fieldset class="form__item">
-            <h2 class="form__title global-title">Опишите свои эмоции:</h2>
+            <h2 class="form__title form__title--area global-title">Опишите свои эмоции:</h2>
             <textarea class="form-area" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <button class="btn btn--form" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+          <p class="form__text">* — обязательные поля</p>
         </form>
       </main>
       <footer class="page-footer">
@@ -104,14 +105,14 @@
         </ul>
         <a class="page-footer__copyright" href="https://htmlacademy.ru/">Разработано</a>
       </footer>
-      <section class="popup">
-        <h2 class="popup__title global-title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
+      <section class="popup popup--failure">
+        <h2 class="popup__title global-title popup__title--failure">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
         <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="btn btn--small" type="button">Ok</button>
       </section>
-      <section class="popup">
+      <section class="popup popup--succes">
         <h2 class="popup__title global-title">Ваш отзыв отправлен!</h2>
-        <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <p class="popup__text popup__text--width">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         <div class="popup__btn-wrap">
           <button class="btn btn--small" type="button">Закрыть окно</button>
         </div>

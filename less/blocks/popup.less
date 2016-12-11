@@ -7,3 +7,55 @@
 .popup__btn-wrap {
   background-color: @popup-wrap-color;
 }
+
+@media @tablet-widths {
+  .popup--failure {
+    width: 400px;
+    margin: 0 auto;
+    padding: 50px 60px;
+    padding-bottom: 50px;
+    background-color: white;
+    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  }
+
+  .popup--succes {
+    width: 648px;
+    margin: 0 auto;
+    padding-bottom: 0;
+    background-color: white;
+    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  }
+
+  .popup__title {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: @large;
+    line-height: 40px;
+
+    &--failure {
+      width: 215px;
+    }
+  }
+
+  .popup__text {
+    margin: 0;
+    margin-bottom: 37px;
+
+    &--width {
+      width: 416px;
+      margin: 0 auto;
+      margin-bottom: 37px;
+    }
+  }
+
+  .popup__btn-wrap {
+    padding: 44px 96px;
+  }
+
+  .btn--small {
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    color: @big-font;
+  }
+}
