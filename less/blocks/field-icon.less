@@ -3,11 +3,27 @@
 }
 
 .field-icon__input {
+  position: relative;
   width: 100%;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  padding: 20px 22px;
   color: @black;
+  font-size: @middle-font;
   font-weight: 700;
   text-transform: none;
   background-color: @popup-wrap-color;
   border: none;
   outline: none;
+}
+
+.field-icon__input::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  display: block;
+  width: 58px;
+  height: 58px;
+  background: transparent url("../img/icon-phone.svg") no-repeat center;
 }

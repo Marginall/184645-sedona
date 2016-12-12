@@ -45,6 +45,17 @@
   position: relative;
   margin: 0;
   padding-left: 37px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    display: block;
+    width: 22px;
+    height: 20px;
+    background: transparent url("../img/icon-like.svg") no-repeat;
+  }
 }
 
 @media @tablet-widths {
