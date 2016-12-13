@@ -62,6 +62,7 @@
     &:nth-child(1) {
       order: -2;
       width: 281px;
+      margin-bottom: 70px;
     }
 
     &:nth-child(2) {
@@ -95,13 +96,12 @@
 
     &--custum {
       position: relative;
-      margin-top: 70px;
-      margin-bottom: 30px;
+      margin-bottom: 60px;
 
       &::after,
       &::before {
         position: absolute;
-        top: 12px;
+        top: 25px;
         content: "";
         display: block;
         width: 125px;
@@ -115,6 +115,18 @@
 
       &::before {
         right: 0;
+      }
+    }
+
+    &--top {
+      margin-bottom: 30px;
+
+      &::after {
+        top: 12px;
+      }
+
+      &::before {
+        top: 12px;
       }
     }
 
@@ -134,10 +146,10 @@
     &--area {
       margin-bottom: 57px;
     }
-  }
 
-  .btn--form {
-    padding: 18px 63px;
+    &--bottom {
+      margin-bottom: 77px;
+    }
   }
 
   .form__text {
@@ -150,27 +162,51 @@
   .form {
     padding: 0 120px;
     padding-top: 0;
+    padding-bottom: 60px;
   }
 
   .form__item {
-
     &:nth-child(1) {
       width: 400px;
     }
 
     &:nth-child(2) {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       flex-wrap: wrap;
     }
 
     &:nth-child(3) {
       width: 400px;
     }
-  }
 
-  .form__title--custum::after,
-  .form__title--custum::before {
-    width: 30%;
+    &:nth-child(4) {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+  .form__title {
+    &--custum::after,
+    &--custum::before {
+      width: 30%;
+    }
+
+    &--top {
+      width: 100%;
+      margin-bottom: 75px;
+    }
+
+    &--center {
+      width: auto;
+      padding: 0 340px;
+    }
+
+    &--center::after {
+      left: 0;
+    }
+
+    &--center::before {
+      right: 0;
+    }
   }
 }

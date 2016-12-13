@@ -86,5 +86,32 @@
       left: 30px;
     }
   }
+}
 
+@media @desktop-widths {
+  .form-checkbox {
+    width: 202px;
+
+    &:nth-child(2) {
+      order: -1;
+      padding-left: 80px;
+    }
+    &:nth-child(3) {
+      order: 1;
+      padding-left: 80px;
+    }
+    &:nth-child(4) {
+      order: 0;
+      padding-left: 80px;
+    }
+    &:nth-child(5) {
+      order: 2;
+      margin-bottom: 70px;
+      padding-left: 80px;
+    }
+  }
+
+  .form-checkbox__indicator {
+    left: 0;
+  }
 }

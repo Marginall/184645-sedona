@@ -3,8 +3,7 @@
 }
 
 .field-icon__input {
-  position: relative;
-  width: 100%;
+  width: auto;
   margin-top: 12px;
   margin-bottom: 10px;
   padding: 20px 22px;
@@ -29,7 +28,43 @@
 }
 
 @media @tablet-widths {
+  .field-icon:last-child {
+    margin-bottom: 25px;
+  }
+
   .field-icon__input {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 30px;
+  }
+}
+
+@media @desktop-widths {
+  .field-icon {
+    display: flex;
+    flex-direction: row;
     width: 400px;
+    margin-right: 80px;
+
+    &:last-child {
+      width: 480px;
+      margin-right: 0;
+    }
+  }
+
+  .field-icon__title {
+    margin-right: 13px;
+    padding-top: 28px;
+  }
+
+  .field-icon__title-disable {
+    display: none;
+  }
+
+  .field-icon__input {
+    width: 320px;
+
+    &:last-child {
+    }
   }
 }
