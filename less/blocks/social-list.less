@@ -4,3 +4,45 @@
   padding: 0;
   list-style: none;
 }
+
+.social-list {
+  .clearfix();
+  margin-bottom: 40px;
+  margin-left: 85px;
+}
+
+.social-list__item {
+  float: left;
+  width: 46px;
+  height: 48px;
+  margin-right: 6px;
+  background: #81b3d2 url("../img/icon-twitter.svg") no-repeat center;
+
+  &:nth-child(2) {
+    background-image: url("../img/icon-facebook.svg");
+  }
+
+  &:nth-child(3) {
+    background-image: url("../img/icon-youtube.svg");
+  }
+}
+
+@media @tablet-widths {
+  .social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .social-list__item {
+    float: none;
+  }
+}
+
+@media @desktop-widths {
+  .social-list {
+    margin-left: -90px;
+  }
+}

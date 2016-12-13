@@ -5,6 +5,57 @@
 }
 
 .page-footer__text {
+  margin: 0;
+  margin-bottom: 36px;
   font-size: @big-font;
   font-weight: 700;
+}
+
+.page-footer__copyright {
+  position: relative;
+  display: block;
+  padding-right: 40px;
+
+  &::after {
+    position: absolute;
+    right: 90px;
+    top: -2px;
+    content: "";
+    display: block;
+    width: 29px;
+    height: 35px;
+    background: transparent url("../img/htmlacademy.svg") no-repeat;
+    background-size: cover;
+  }
+}
+
+@media @tablet-widths {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .page-footer__text {
+    margin-bottom: 0;
+    padding-top: 10px;
+  }
+
+  .page-footer__copyright {
+    padding-top: 10px;
+
+    &::after {
+      right: 0px;
+      top: 5px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .page-footer {
+    padding-left: 132px;
+    padding-right: 83px;
+  }
 }

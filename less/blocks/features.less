@@ -1,27 +1,120 @@
 .features {
-  padding-top: 35px;
   text-align: center;
   background-color: @blue;
 
-  &--color {
-    padding-top: 30px;
-    padding-bottom: 25px;
-    background-color: @grey;
-  }
   &--font-color {
     color: @white;
   }
 }
 
-.features-list__item {
-  padding-left: 70px;
-  padding-right: 40px;
+.features__wrapper {
+  position: relative;
+  padding: 0 20px;
+  padding-top: 40px;
+  padding-bottom: 42px;
 
-  &:last-child {
-    margin-bottom: 40px;
+  &--color {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: @grey;
+  }
+
+  &--border::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 88%;
+    height: 1px;
+    background-color: @grey-border-index;
   }
 }
 
+.features__title {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.features-number {
+  margin-bottom: 18px;
+}
+
 .features__text {
-  margin-bottom: 0;
+  margin: 0;
+}
+
+.features__image-block {
+  width: 320px;
+  height: 260px;
+  background: transparent url("../img/photo-city@1x.jpg") no-repeat;
+  background-size: cover;
+}
+
+.features:nth-child(2)  .features__image-block {
+  background: transparent url("../img/photo-4-mobile@1x.jpg") no-repeat;
+}
+
+@media @tablet-widths {
+  .features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &--small {
+      width: 33%;
+      flex-grow: 1;
+    }
+  }
+
+  .features__wrapper {
+    width: 256px;
+    padding-bottom: 27px;
+
+    &--color {
+      flex-grow: 1;
+      padding: 47px 50px;
+    }
+
+    &--border::after {
+      display: none;
+    }
+
+    &--order {
+      order: 3;
+    }
+  }
+
+  .features__image-block {
+    width: 512px;
+    height: 256px;
+  }
+
+  .features__image-block--order {
+    order: 2;
+  }
+}
+
+@media @desktop-widths {
+  .features__wrapper {
+    width: 400px;
+  }
+
+  .features__image-block {
+    width: 800px;
+  }
+
+  .features__title {
+    width: 151px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .features__text {
+    width: 274px;
+    margin: 0 auto;
+
+    &--custum {
+      width: 225px;
+    }
+  }
 }

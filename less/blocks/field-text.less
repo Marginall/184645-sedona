@@ -1,5 +1,58 @@
+.field-text {
+  .clearfix();
+  margin-bottom: 20px;
+}
+
+.field-text__title {
+  float: left;
+  padding-top: 20px;
+}
+
 .field-text__input {
+  float: right;
+  width: 100%;
+  padding: 20px 20px;
   color: @black;
+  font-size: @middle-font;
   font-weight: 700;
   text-transform: none;
+  background-color: @popup-wrap-color;
+  border: none;
+  outline: none;
+
+
+  &--wide {
+    width: 230px;
+  }
+
+  &--narrow {
+    width: 192px;
+  }
+}
+
+@media @tablet-widths {
+  .field-text:last-child {
+    margin-bottom: 0;
+  }
+
+  .field-text__title {
+    margin-right: 14px;
+  }
+
+  .field-text__title {
+    margin-right: 14px;
+  }
+}
+
+@media @desktop-widths {
+  .field-text__input {
+
+    &--wide {
+      width: 349px;
+    }
+
+    &--narrow {
+      width: 312px;
+    }
+  }
 }

@@ -1,5 +1,26 @@
 .input-error {
+  margin: 0;
+  margin-bottom: 20px;
   color: @error;
   font-weight: 700;
   text-transform: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media @tablet-widths {
+  .input-error {
+    position: absolute;
+    top: 0px;
+    right: 0;
+  }
+}
+
+@media @desktop-widths {
+  .input-error {
+    top: -20px;
+    right: 107px;
+  }
 }

@@ -1,6 +1,4 @@
 .global-title {
-  margin: 0;
-  margin-bottom: 10px;
   color: @black;
   font-size: @middle-font;
   font-weight: 700;
@@ -12,5 +10,15 @@
 
   &--left {
     text-align: left;
+  }
+}
+
+@media @tablet-widths {
+  .global-title {
+    font-size: @big-font;
+  }
+
+  .global-title--left {
+    text-align: center;
   }
 }

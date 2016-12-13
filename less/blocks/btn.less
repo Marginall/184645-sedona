@@ -1,4 +1,5 @@
 .btn {
+  display: block;
   color: @white;
   font-size: @big-font;
   text-transform: uppercase;
@@ -8,10 +9,26 @@
   outline: none;
 
   &--small {
+    margin: 0 auto;
+    padding: 20px 75px;
     font-size: @middle-font;
   }
 
   &--form {
-    margin-left: 20px;
+    margin: 0 auto;
+    padding: 18px 45px;
+  }
+}
+
+@media @tablet-widths {
+  .btn--form {
+    margin: 0;
+    padding: 18px 63px;
+  }
+}
+
+@media @desktop-widths {
+  .btn--form {
+    padding: 18px 148px;
   }
 }

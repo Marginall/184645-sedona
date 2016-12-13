@@ -1,18 +1,14 @@
-.gallery-item {
-  padding: 20px;
-  padding-top: 23px;
-  border-top: 1px solid @grey-border;
-
-  &:first-child {
-    border-top: none;
+@media @tablet-widths {
+  .gallery-page__image-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 60px;
   }
 }
 
-.gallery-item__image-box {
-  margin: 0;
-  padding: 0;
-}
-
-.gallery-item__image {
-  display: block;
+@media @desktop-widths {
+  .gallery-page__image-block {
+    padding: 0;
+  }
 }
