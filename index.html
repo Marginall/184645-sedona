@@ -8,8 +8,8 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page">
-    <div class="page-wrapper">
-      <header class="page-header">
+    <header class="page-header">
+      <div class="page-header__container">
         <nav class="page-header__nav main-nav main-nav--show">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__item-link main-nav__item-link--active">Главная</a></li>
@@ -19,15 +19,19 @@
           </ul>
         </nav>
         <div class="header-logo"><a class="header-logo__link"><img class="header-logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona Logo"></a></div>
-        <button class="page-header__btn" type="button"></button>
-      </header>
-      <main class="main-page">
-        <section class="intro-block">
+        <button class="page-header__btn page-header__btn--close" type="button"></button>
+      </div>
+    </header>
+    <main class="main-page">
+      <section class="intro-block">
+        <div class="intro-block__container">
           <div class="intro-block__poster"><img class="intro-block__img" src="img/text-sedona-index.svg" width="280" height="210" alt="Картинка"></div>
           <h1 class="intro-block__title global-title">СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!</h1>
           <p class="intro-block__text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
-        </section>
-        <div class="features-block">
+        </div>
+      </section>
+      <div class="features-block">
+        <div class="features-block__container">
           <section class="features features--font-color">
             <div class="features__wrapper">
               <h2 class="features__title global-title global-title--color">Настоящий городок</h2>
@@ -80,14 +84,18 @@
             </div>
           </section>
         </div>
-        <section class="hotels-search">
+      </div>
+      <section class="hotels-search">
+        <div class="hotels-search__container">
           <h2 class="hotels-search__title global-title global-title--big">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
           <p class="hotels-search__text"><a class="hotels-search__link" href="#">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</a></p>
           <a class="hotels-search__btn btn" href="#">Найти гостиницу</a>
-        </section>
-        <div class="map"></div>
-      </main>
-      <footer class="page-footer">
+        </div>
+      </section>
+      <div class="map"></div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__container">
         <p class="page-footer__text">#visitSEDONA</p>
         <ul class="page-footer__list social-list">
           <li class="social-list__item"><a class="social__link social__link--twit" href="#"></a></li>
@@ -95,7 +103,7 @@
           <li class="social-list__item"><a class="social__link social__link--youtube" href="#"></a></li>
         </ul>
         <a class="page-footer__copyright" href="https://htmlacademy.ru">Разработано</a>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>

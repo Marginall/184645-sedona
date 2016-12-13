@@ -1,7 +1,11 @@
 .page-footer {
+  text-align: center;
+}
+
+.page-footer__container {
   padding-top: 40px;
   padding-bottom: 32px;
-  text-align: center;
+  background-color: @white;
 }
 
 .page-footer__text {
@@ -18,7 +22,7 @@
 
   &::after {
     position: absolute;
-    right: 96px;
+    right: 105px;
     top: -2px;
     content: "";
     display: block;
@@ -30,7 +34,8 @@
 }
 
 @media @tablet-widths {
-  .page-footer {
+  .page-footer__container {
+    .container();
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,7 +59,7 @@
 }
 
 @media @desktop-widths {
-  .page-footer {
+  .page-footer__container {
     padding-left: 132px;
     padding-right: 83px;
   }

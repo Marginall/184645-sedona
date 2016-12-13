@@ -1,11 +1,16 @@
 .intro-block {
-  padding-bottom: 45px;
   text-align: center;
 
   &--inner-page {
     padding-bottom: 20px;
     border-bottom: 1px solid @grey-border;
   }
+}
+
+.intro-block__container {
+  .container();
+  padding-bottom: 55px;
+  background-color: @white;
 }
 
 .intro-block__poster {
@@ -100,9 +105,5 @@
     margin-bottom: 110px;
     background-position: 49% 100%;
     background-size: 100% 185%;
-  }
-
-  .intro-block__text {
-    margin-bottom: 55px;
   }
 }

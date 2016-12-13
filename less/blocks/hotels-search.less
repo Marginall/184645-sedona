@@ -1,7 +1,12 @@
 .hotels-search {
+  text-align: center;
+}
+
+.hotels-search__container {
+  .container();
   padding-top: 30px;
   padding-bottom: 50px;
-  text-align: center;
+  background-color: @white;
 }
 
 .hotels-search__title {
@@ -19,7 +24,7 @@
 }
 
 @media @tablet-widths {
-  .hotels-search {
+  .hotels-search__container {
     padding-top: 54px;
     padding-bottom: 58px;
   }
@@ -38,12 +43,5 @@
     width: 458px;
     margin: 0 auto;
     padding: 16px 136px;
-  }
-}
-
-@media @desktop-widths {
-  .hotels-search {
-    padding-left: 155px;
-    padding-right: 155px;
   }
 }
