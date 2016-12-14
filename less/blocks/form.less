@@ -1,17 +1,19 @@
+.form {
+  padding-top: 18px;
+  padding-bottom: 38px;
+}
+
 .form__item {
+  width: 100%;
   box-sizing: border-box;
   padding: 20px;
-  padding-top: 22px;
+  padding-top: 19px;
   padding-bottom: 25px;
   border: none;
   border-top: 1px solid @grey-border;
 
-  &:first-child {
-    border-top: none;
-  }
-
-  &:last-child {
-    border-bottom: none;
+  &:nth-child(3) {
+    padding-top: 17px;
   }
 }
 
@@ -38,6 +40,26 @@
 
 .form__title {
   margin-top: 0;
+
+  &--name {
+    margin-bottom: 21px;
+  }
+
+  &--contacts {
+    margin-bottom: 20px;
+  }
+
+  &--radio {
+    margin-bottom: 38px;
+  }
+
+  &--checkbox {
+    margin-bottom: 30px;
+  }
+
+  &--area {
+    margin-bottom: 16px;
+  }
 }
 
 .form__text {

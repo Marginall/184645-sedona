@@ -1,44 +1,93 @@
 .intro-block {
-  padding-bottom: 55px;
+  position: relative;
+  padding-bottom: 42px;
   text-align: center;
 
+  &::before {
+    position: absolute;
+    bottom: 1px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 37px;
+    background: transparent url("../../img/bg-triangle.svg") no-repeat;
+    background-size: cover;
+    z-index: 5;
+  }
+
   &--inner-page {
-    border-bottom: 1px solid @grey-border;
+    padding-bottom: 0;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
 .intro-block__poster {
+  position: relative;
   width: 320px;
-  height: 300px;
-  margin-bottom: 45px;
-  padding-top: 50px;
+  height: 386px;
+  margin-bottom: 42px;
+  padding-top: 88px;
   background: @transparent url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 50%;
   background-size: cover;
 
-  &--inner-page {
+  &::before {
+    position: absolute;
+    bottom: -1px;
+    content: "";
+    display: block;
     width: 320px;
-    height: 160px;
-    margin-bottom: 40px;
+    height: 26px;
+    background: transparent url("../../img/bg-intro-triangle-mobile.svg") no-repeat;
+    background-size: cover;
+  }
+
+  &--inner-page {
+    position: relative;
+    width: 320px;
+    height: 190px;
+    margin-bottom: 6px;
     padding-top: 50px;
     background: transparent url("../img/bg-back-mobile@1x.jpg") no-repeat 58% 118%;
     background-size: 200% 200%;
+
+    &::before {
+      position: absolute;
+      bottom: 23px;
+      content: "";
+      display: block;
+      width: 320px;
+      height: 37px;
+      background: transparent url("../../img/bg-intro-triangle-mobile.svg") no-repeat;
+    }
   }
 }
 
 .intro-block__title {
   width: 258px;
   margin: auto;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
+
+  &--inner-page {
+    margin-bottom: 24px;
+  }
 }
 
 .intro-block__text {
   width: 250px;
   margin: auto;
+
+  &--inner-page {
+    width: 275px;
+    line-height: 24px;
+  }
 }
 
 .intro-block__img {
   width: 280px;
-  height: 210px;
+  height: 213px;
 }
 
 .intro-block__img--inner-page {

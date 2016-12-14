@@ -1,8 +1,11 @@
 .gallery-item {
   padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 18px;
   border-top: 1px solid @grey-border;
 
   &:first-child {
+    padding-top: 21px;
     border-top: none;
   }
 }
@@ -17,7 +20,7 @@
 }
 
 .gallery-item__caption {
-  padding-top: 20px;
+  padding-top: 16px;
 }
 
 .gallery-item__text,
@@ -36,7 +39,8 @@
 }
 
 .gallery-item__author {
-  margin-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 6px;
   text-transform: none;
 }
 
@@ -48,7 +52,7 @@
   &::before {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -2px;
     content: "";
     display: block;
     width: 22px;
