@@ -74,7 +74,7 @@
     flex-wrap: wrap;
     padding: 0 60px;
     padding-top: 60px;
-    padding-bottom: 57px;
+    padding-bottom: 61px;
   }
 
   .form__item {
@@ -85,6 +85,7 @@
       order: -2;
       width: 281px;
       margin-bottom: 70px;
+      padding-left: 14px;
     }
 
     &:nth-child(2) {
@@ -93,8 +94,21 @@
     }
 
     &:nth-child(3) {
+      position: relative;
       order: -3;
       width: 275px;
+      padding-top: 0;
+
+      &::after {
+        position: absolute;
+        top: 5px;
+        right: -49px;
+        content: "";
+        display: block;
+        width: 1px;
+        height: 292px;
+        background-color: @title-decoration;
+      }
     }
 
     &:nth-child(4) {
@@ -104,74 +118,17 @@
       align-items: center;
       flex-wrap: wrap;
       margin: 0 auto;
+      margin-bottom: 14px;
     }
 
     &:nth-child(5) {
       width: 100%;
-      margin-bottom: 57px;
+      margin-bottom: 50px;
     }
   }
 
   .form__title {
     margin: 0;
-    margin-bottom: 57px;
-
-    &--custum {
-      position: relative;
-      margin-bottom: 60px;
-
-      &::after,
-      &::before {
-        position: absolute;
-        top: 25px;
-        content: "";
-        display: block;
-        width: 125px;
-        height: 1px;
-        background-color: @title-decoration;
-      }
-
-      &::after {
-        left: 0;
-      }
-
-      &::before {
-        right: 0;
-      }
-    }
-
-    &--top {
-      margin-bottom: 30px;
-
-      &::after {
-        top: 12px;
-      }
-
-      &::before {
-        top: 12px;
-      }
-    }
-
-    &--center {
-      order: -2;
-      width: 350px;
-
-      &::after {
-        left: -148px;
-      }
-
-      &::before {
-        right: -148px;
-      }
-    }
-
-    &--area {
-      margin-bottom: 57px;
-    }
-
-    &--bottom {
-      margin-bottom: 77px;
-    }
   }
 
   .form__text {
@@ -208,27 +165,10 @@
     }
   }
   .form__title {
+
     &--custum::after,
     &--custum::before {
       width: 30%;
-    }
-
-    &--top {
-      width: 100%;
-      margin-bottom: 75px;
-    }
-
-    &--center {
-      width: auto;
-      padding: 0 340px;
-    }
-
-    &--center::after {
-      left: 0;
-    }
-
-    &--center::before {
-      right: 0;
     }
   }
 }

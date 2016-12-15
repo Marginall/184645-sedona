@@ -5,9 +5,9 @@
 
   &::before {
     position: absolute;
-    bottom: 1px;
+    bottom: -3px;
     content: "";
-    display: block;
+    display: none;
     width: 100%;
     height: 37px;
     background: transparent url("../../img/bg-triangle.svg") no-repeat;
@@ -97,44 +97,54 @@
 
 @media @tablet-widths {
   .intro-block {
+    padding-bottom: 50px;
     border: none;
+
+    &--inner-page {
+      padding-bottom: 14px;
+    }
   }
 
   .intro-block__poster {
     width: 100%;
     height: 520px;
+    margin-bottom: 49px;
     padding-top: 77px;
 
     &--inner-page {
-      height: 290px;
-      margin-bottom: 0;
+      height: 359px;
+      margin-bottom: 6px;
       padding-top: 80px;
-      background-position: 49% 137%;
-      background-size: 150% 150%;
+      background-position: 49% 143%;
+      background-size: 132% 144%;
     }
   }
 
   .intro-block__title {
     width: 440px;
 
-    &--inner {
-      margin: 0;
-      margin-bottom: 30px;
+    &--inner-page {
+      margin: 0 auto;
+      margin-bottom: 31px;
       font-size: @large;
     }
   }
 
   .intro-block__text {
-    width: 440px;
+    width: 500px;
+
+    &--inner-page {
+      width: 440px;
+    }
   }
 
   .intro-block__img {
     width: 465px;
-    height: 345px;
+    height: 350px;
 
     &--inner-page {
-      width: 460px;
-      height: 80px;
+      width: 458px;
+      height: 111px;
     }
   }
 }

@@ -4,6 +4,26 @@
   font-weight: 700;
   text-align: center;
 
+  &--name {
+    margin-bottom: 21px;
+  }
+
+  &--contacts {
+    margin-bottom: 20px;
+  }
+
+  &--radio {
+    margin-bottom: 38px;
+  }
+
+  &--checkbox {
+    margin-bottom: 30px;
+  }
+
+  &--area {
+    margin-bottom: 16px;
+  }
+
   &--color {
     color: @white;
   }
@@ -16,9 +36,77 @@
 @media @tablet-widths {
   .global-title {
     font-size: @big-font;
-  }
 
-  .global-title--left {
-    text-align: center;
+    &--left {
+      text-align: center;
+    }
+
+    &--color {
+      width: 151px;
+      margin-bottom: 8px;
+    }
+
+    &--name {
+      margin-bottom: 58px;
+      text-align: left;
+    }
+
+    &--contacts {
+      margin-bottom: 25px;
+    }
+
+    &--radio {
+      margin-bottom: 73px;
+    }
+
+    &--checkbox {
+      position: relative;
+      order: -2;
+      width: 60%;
+      margin-bottom: 56px;
+
+      &::after,
+      &::before {
+        position: absolute;
+        top: 25px;
+        content: "";
+        display: block;
+        width: 125px;
+        height: 1px;
+        background-color: @title-decoration;
+      }
+
+      &::after {
+        right: -130px;
+      }
+
+      &::before {
+        left: -130px;
+      }
+    }
+
+    &--area {
+      position: relative;
+      margin-bottom: 57px;
+
+      &::after,
+      &::before {
+        position: absolute;
+        top: 13px;
+        content: "";
+        display: block;
+        width: 125px;
+        height: 1px;
+        background-color: @title-decoration;
+      }
+
+      &::after {
+        right: 0px;
+      }
+
+      &::before {
+        left: 0px;
+      }
+    }
   }
 }

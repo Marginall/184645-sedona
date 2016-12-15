@@ -35,8 +35,19 @@
 }
 
 @media @tablet-widths {
-  .field-text:last-child {
-    margin-bottom: 0;
+  .field-text {
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .field-text__input--wide {
+    width: 215px;
+  }
+
+  .field-text__input--narrow {
+    width: 179px;
   }
 
   .field-text__title {

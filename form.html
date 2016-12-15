@@ -25,9 +25,9 @@
           <h1 class="intro-block__title intro-block__title--inner-page global-title">Оставьте свой отзыв</h1>
           <p class="intro-block__text intro-block__text--inner-page">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </section>
-        <form class="form">
+        <form class="form" action="echo.htmlacademy.ru" method="post">
           <div class="form__item">
-            <h2 class="form__title form__title--name global-title">Представьтесь:</h2>
+            <h2 class="form__title global-title global-title--name">Представьтесь:</h2>
             <div class="field-text">
               <label class="field-text__title" for="form-name">Имя<span class="field-text__decoration">*</span>:</label>
               <input class="field-text__input field-text__input--wide" id="form-name" type="text" value="Петр">
@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="form__item">
-            <h2 class="form__title form__title--contacts global-title">Контактная информация:</h2>
+            <h2 class="form__title global-title global-title--contacts">Контактная информация:</h2>
             <div class="field-icon">
               <label class="field-icon__title" for="form-tel"><span class="field-icon__title-disable">Контактный</span> телефон*:</label>
               <input class="field-icon__input" id="form-tel" type="tel" placeholder="Введите телефон">
@@ -55,7 +55,7 @@
             </div>
           </div>
           <div class="form__item">
-            <h2 class="form__title form__title--radio global-title">ВАше Общее впечатление:</h2>
+            <h2 class="form__title global-title global-title--radio">ВАше Общее впечатление:</h2>
             <label class="form-radio">Скорее положительное
               <input class="form-radio__input" type="radio" name="impression" value="yes" checked>
               <span class="form-radio__indicator"></span>
@@ -70,7 +70,7 @@
             </label>
           </div>
           <div class="form__item">
-            <h2 class="form__title form__title--checkbox global-title">Посещенные достопримечательности:</h2>
+            <h2 class="form__title global-title global-title--checkbox">Посещенные достопримечательности:</h2>
             <label class="form-checkbox">Мост Дьявола
               <input class="form-checkbox__input" type="checkbox" value="1">
               <span class="form-checkbox__indicator"></span>
@@ -89,7 +89,7 @@
             </label>
           </div>
           <div class="form__item">
-            <h2 class="form__title form__title--area global-title">Опишите свои эмоции:</h2>
+            <h2 class="form__title global-title global-title--area">Опишите свои эмоции:</h2>
             <textarea class="form-area" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
           <button class="btn btn--form" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>

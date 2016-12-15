@@ -74,12 +74,13 @@
     flex-direction: row;
     flex-grow: 1;
     padding: 60px 0;
+    padding-bottom: 65px;
   }
 
   .features-list__item {
     flex-grow: 1;
     box-sizing: border-box;
-    padding: 0 5%;
+    padding: 0 30px;
     padding-top: 100px;
     text-align: center;
 
@@ -95,8 +96,8 @@
       top: 0;
       left: 0;
       right: 0;
-      width: 64px;
-      height: 75px;
+      width: 76px;
+      height: 78px;
       margin: auto;
     }
 
@@ -110,8 +111,8 @@
     }
 
     &:nth-child(3)::before {
-      top: 0;
-      left: 0;
+      top: 4px;
+      left: 1px;
       right: 0;
       width: 77px;
       height: 68px;
@@ -119,7 +120,13 @@
     }
   }
 
+  .features-list__title {
+    margin-bottom: 20px;
+  }
+
   .features-list__text {
+    width: 165px;
+    margin: 0 auto;
     margin-bottom: 0;
   }
 }
