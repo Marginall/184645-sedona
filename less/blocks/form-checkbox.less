@@ -8,6 +8,7 @@
   font-size: @middle-font;
   font-weight: 700;
   text-transform: none;
+  cursor: pointer;
 
   &:last-child {
     margin-bottom: 16px;
@@ -33,7 +34,7 @@
     top: 45%;
     left: 17px;
     content: "";
-    display: block;
+    display: none;
     width: 20px;
     height: 4px;
     background-color: @black;
@@ -46,7 +47,7 @@
     top: 50%;
     left: 11px;
     content: "";
-    display: block;
+    display: none;
     width: 13px;
     height: 4px;
     background-color: @black;
@@ -54,6 +55,13 @@
     transform: rotate(45deg);
   }
 }
+
+.form-checkbox__input:checked + .form-checkbox__indicator::after,
+.form-checkbox__input:checked + .form-checkbox__indicator::before {
+  display: block;
+}
+
+
 
 @media @tablet-widths {
   .form-checkbox {
