@@ -141,12 +141,13 @@
   .form {
     padding: 0 120px;
     padding-top: 0;
-    padding-bottom: 60px;
+    padding-bottom: 63px;
   }
 
   .form__item {
     &:nth-child(1) {
       width: 400px;
+      padding-left: 0;
     }
 
     &:nth-child(2) {
@@ -156,14 +157,24 @@
     }
 
     &:nth-child(3) {
-      width: 400px;
+      width: 432px;
+
+      &::after {
+        right: -49px;
+      }
     }
 
     &:nth-child(4) {
       justify-content: space-between;
       width: 100%;
+      margin-bottom: 12px;
+    }
+
+    &:nth-child(5) {
+      margin-bottom: 50px;
     }
   }
+
   .form__title {
 
     &--custum::after,

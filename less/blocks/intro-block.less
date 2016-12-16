@@ -150,13 +150,33 @@
 }
 
 @media @desktop-widths {
-  .intro-block__poster {
-    background-position: 50% 10%;
+  .intro-block {
+    padding-bottom: 59px;
+
+    &--gallery {
+      padding-bottom: 70px;
+    }
   }
 
-  .intro-block__poster--inner-page {
-    margin-bottom: 110px;
-    background-position: 49% 100%;
-    background-size: 100% 185%;
+
+  .intro-block__poster {
+
+    &--inner-page {
+      margin-bottom: 54px;
+      background-position: 49% 105%;
+      background-size: cover;
+
+      &::before {
+        left: 247px;
+        bottom: 0px;
+        width: 350px;
+        height: 115px;
+        background-size: cover;
+      }
+    }
+  }
+
+  .intro-block__img {
+    height: 125px;
   }
 }

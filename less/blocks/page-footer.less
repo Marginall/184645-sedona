@@ -55,7 +55,16 @@
 
 @media @desktop-widths {
   .page-footer {
+    padding-top: 37px;
     padding-left: 132px;
     padding-right: 83px;
+  }
+
+  .page-footer__copyright {
+    padding-right: 0;
+
+    &::after {
+      right: -46px;
+    }
   }
 }

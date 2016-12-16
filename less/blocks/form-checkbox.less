@@ -91,28 +91,45 @@
 
 @media @desktop-widths {
   .form-checkbox {
-    width: 202px;
+    width: 240px;
+    padding-left: 0px;
 
     &:nth-child(2) {
       order: -1;
+      margin-top: -8px;
       padding-left: 80px;
     }
+
     &:nth-child(3) {
       order: 1;
-      padding-left: 80px;
+      padding-left: 119px;
     }
+
     &:nth-child(4) {
       order: 0;
-      padding-left: 80px;
+      margin-top: -9px;
+      padding-left: 100px;
     }
+
     &:nth-child(5) {
       order: 2;
-      margin-bottom: 70px;
-      padding-left: 80px;
+      padding-left: 116px;
     }
   }
 
-  .form-checkbox__indicator {
+  .form-checkbox:nth-child(2) .form-checkbox__indicator {
     left: 0;
+  }
+
+  .form-checkbox:nth-child(3) .form-checkbox__indicator {
+    left: 38px;
+  }
+
+  .form-checkbox:nth-child(4) .form-checkbox__indicator {
+    left: 20px;
+  }
+
+  .form-checkbox:nth-child(5) .form-checkbox__indicator {
+    left: 33px;
   }
 }

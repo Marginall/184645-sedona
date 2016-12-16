@@ -49,10 +49,18 @@
 @media @tablet-widths {
   .form-radio {
     margin-bottom: 52px;
-    padding-left: 76px;
+    padding-left: 80px;
 
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  .form-radio__indicator::before {
+    left: 3px;
+  }
+
+  .form-radio__indicator::after {
+    left: 21px;
   }
 }

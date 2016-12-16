@@ -110,3 +110,58 @@
     }
   }
 }
+
+@media @desktop-widths {
+  .global-title {
+
+    &--contacts {
+      position: relative;
+      width: 100%;
+      margin-bottom: 66px;
+
+      &::after,
+      &::before {
+        position: absolute;
+        top: 11px;
+        content: "";
+        display: block;
+        width: 280px;
+        height: 1px;
+        background-color: @title-decoration;
+      }
+    }
+
+    &--checkbox {
+      width: 100%;
+      margin-bottom: 56px;
+      padding: 0 290px;
+
+      &::after{
+        right: 0;
+        width: 280px;
+      }
+
+      &::before{
+        left: 0;
+        width: 280px;
+      }
+    }
+
+    &--area {
+      position: relative;
+      margin-bottom: 57px;
+
+      &::after {
+        top: 12px;
+        right: 0px;
+        width: 280px;
+      }
+
+      &::before {
+        top: 12px;
+        left: 0px;
+        width: 280px;
+      }
+    }
+  }
+}
