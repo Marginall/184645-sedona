@@ -11,11 +11,17 @@
   position: relative;
   padding: 0 20px;
   padding-top: 40px;
-  padding-bottom: 42px;
+  padding-bottom: 39px;
+
+  &--top {
+    margin-top: -27px;
+    padding-top: 67px;
+  }
 
   &--color {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 0 35px;
+    padding-top: 26px;
+    padding-bottom: 28px;
     background-color: @grey;
   }
 
@@ -32,26 +38,29 @@
 
 .features__title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 6px;
 }
 
-.features-number {
-  margin-bottom: 18px;
+.features__number {
+  margin: 0;
+  margin-bottom: 12px;
 }
 
 .features__text {
   margin: 0;
+  line-height: 22px;
 }
 
 .features__image-block {
+  display: block;
   width: 320px;
   height: 260px;
-  background: transparent url("../img/photo-city@1x.jpg") no-repeat;
-  background-size: cover;
 }
 
-.features:nth-child(2)  .features__image-block {
-  background: transparent url("../img/photo-4-mobile@1x.jpg") no-repeat;
+.features__image {
+  display: block;
+  min-width: 320px;
+  height: 260px;
 }
 
 @media @tablet-widths {
@@ -68,11 +77,12 @@
 
   .features__wrapper {
     width: 256px;
-    padding-bottom: 27px;
+    padding-top: 45px;
+    padding-bottom: 41px;
 
     &--color {
       flex-grow: 1;
-      padding: 47px 50px;
+      padding: 45px 50px;
     }
 
     &--border::after {
@@ -82,11 +92,40 @@
     &--order {
       order: 3;
     }
+
+    &--top {
+      margin-top: 0;
+      padding-top: 46px;
+    }
+  }
+
+  .features__title {
+    margin: 0 auto;
+    margin-bottom: 7px;
   }
 
   .features__image-block {
     width: 512px;
     height: 256px;
+  }
+
+  .features__image {
+    width: 512px;
+    height: auto;
+  }
+
+  .features__number {
+    margin-bottom: 18px;
+  }
+
+  .features__text {
+    width: 171px;
+    margin: 0 auto;
+    line-height: 21px;
+
+    &--narrow {
+      width: 147px;
+    }
   }
 
   .features__image-block--order {
@@ -97,6 +136,12 @@
 @media @desktop-widths {
   .features__wrapper {
     width: 400px;
+    padding-top: 53px;
+
+    &--color {
+      padding-top: 45px;
+      padding-bottom: 66px;
+    }
   }
 
   .features__image-block {
@@ -107,14 +152,23 @@
     width: 151px;
     margin: 0 auto;
     margin-bottom: 15px;
+
+    &--small {
+      margin-bottom: 8px;
+    }
   }
 
   .features__text {
-    width: 274px;
+    width: 278px;
     margin: 0 auto;
 
     &--custum {
       width: 225px;
     }
+  }
+
+  .features__image {
+    width: 800px;
+    height: 256px;
   }
 }

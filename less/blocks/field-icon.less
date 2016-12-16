@@ -1,12 +1,28 @@
 .field-icon {
   position: relative;
+
+  &::after {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    content: "";
+    display: block;
+    width: 58px;
+    height: 58px;
+    background: @bg-grey-icon url("../img/icon-phone.svg") no-repeat center;
+  }
+
+  &:last-child::after {
+    background: @bg-grey-icon url("../img/icon-mail.svg") no-repeat center;
+  }
 }
 
 .field-icon__input {
-  width: auto;
-  margin-top: 12px;
-  margin-bottom: 10px;
-  padding: 20px 22px;
+  width: 100%;
+  margin-top: 7px;
+  margin-bottom: 5px;
+  padding: 16px 22px;
+  padding-bottom: 18px;
   color: @black;
   font-size: @middle-font;
   font-weight: 700;
@@ -16,26 +32,24 @@
   outline: none;
 }
 
-.field-icon__input::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  content: "";
-  display: block;
-  width: 58px;
-  height: 58px;
-  background: transparent url("../img/icon-phone.svg") no-repeat center;
+.field-icon__title {
+  margin-left: 22px;
+  margin-bottom: 20px;
 }
 
 @media @tablet-widths {
-  .field-icon:last-child {
-    margin-bottom: 25px;
+  .field-icon {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 48px;
+    }
   }
 
   .field-icon__input {
     width: 100%;
-    height: 56px;
-    margin-bottom: 30px;
+    height: 58px;
+    margin-top: 6px;
   }
 }
 
@@ -50,11 +64,16 @@
       width: 480px;
       margin-right: 0;
     }
+
+    &::after {
+      top: 6px;
+    }
   }
 
   .field-icon__title {
-    margin-right: 13px;
-    padding-top: 28px;
+    margin-left: -1px;
+    margin-right: 17px;
+    padding-top: 24px;
   }
 
   .field-icon__title-disable {
@@ -62,7 +81,8 @@
   }
 
   .field-icon__input {
-    width: 320px;
+    width: 317px;
+    margin-top: 7px;
 
     &:last-child {
     }
