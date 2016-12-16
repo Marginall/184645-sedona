@@ -1,4 +1,6 @@
 .gallery-item {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   padding-top: 20px;
   padding-bottom: 18px;
@@ -94,18 +96,19 @@
   }
 
   .gallery-item__likes {
-    align-self: center;
+    align-self: flex-end;
     order: 1;
     margin-top: -11px;
-    padding-right: 238px;
+    padding-right: 30px;
+    padding-left: 0;
 
     &::before {
       top: -1px;
-      left: 207px;
+      left: -32px;
     }
 
     &--big-img {
-      margin-right: 21px;
+      margin-right: -9px;
     }
   }
 
@@ -159,7 +162,7 @@
     padding-left: 0;
 
     &--big-img {
-      padding-right: 0px;
+      padding-right: 31px;
     }
 
     &::before {

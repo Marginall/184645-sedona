@@ -52,7 +52,27 @@
     }
 
     &--contacts {
+      position: relative;
       margin-bottom: 25px;
+
+      &::after,
+      &::before {
+        position: absolute;
+        top: 13px;
+        content: "";
+        display: block;
+        width: 125px;
+        height: 1px;
+        background-color: @title-decoration;
+      }
+
+      &::after {
+        right: 0px;
+      }
+
+      &::before {
+        left: 0px;
+      }
     }
 
     &--radio {
@@ -128,6 +148,10 @@
         width: 280px;
         height: 1px;
         background-color: @title-decoration;
+      }
+
+      &::before {
+        right: 0;
       }
     }
 

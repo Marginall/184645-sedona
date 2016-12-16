@@ -5,9 +5,9 @@
 
   &::before {
     position: absolute;
-    bottom: -3px;
+    bottom: -1px;
     content: "";
-    display: none;
+    display: block;
     width: 100%;
     height: 37px;
     background: transparent url("../../img/bg-triangle.svg") no-repeat;
@@ -100,6 +100,10 @@
     padding-bottom: 50px;
     border: none;
 
+    &::before {
+      display: none;
+    }
+
     &--inner-page {
       padding-bottom: 14px;
     }
@@ -154,15 +158,18 @@
     padding-bottom: 50px;
     overflow: hidden;
 
+    &::before {
+      display: none;
+    }
+
     &--inner-page {
       padding-bottom: 59px;
+    }
 
-      &--gallery {
-        padding-bottom: 70px;
-      }
+    &--gallery {
+      padding-bottom: 70px;
     }
   }
-
 
   .intro-block__poster {
 
