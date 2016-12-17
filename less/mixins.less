@@ -18,3 +18,30 @@
     width: 1200px;
   }
 }
+
+.progress() {
+    animation-name: progress;
+    -webkit-animation-name: progress;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+  @-webkit-keyframes progress {
+    from {
+      background-color: #5496bd;
+    }
+
+    to {
+      background-color: #3e84ae;
+    }
+  }
+
+  @keyframes progress {
+    from {
+      background-color: #fff;
+    }
+
+    to {
+      background-color: #000;
+    }
+  }
+}
