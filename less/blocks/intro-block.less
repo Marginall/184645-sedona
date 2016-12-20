@@ -14,8 +14,9 @@
 .intro-block__poster {
   position: relative;
   width: 320px;
-  padding-top: 88px;
-  background: @transparent url("../img/bg-back-mobile@1x.jpg") no-repeat center;
+  min-height: 390px;
+  padding-top: 90px;
+  background: @transparent url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0%;
 
   &::after {
     position: absolute;
@@ -39,6 +40,16 @@
   }
 }
 
+.intro-block__text-wrapper {
+  padding: 40px 30px;
+  padding-bottom: 5px;
+}
+
+.intro-block__img {
+  width: 280px;
+  height: 215px;
+}
+
 @media @retina {
  .intro-block__poster {
    background-image: url("../img/bg-back-mobile@2x.jpg");
@@ -60,11 +71,6 @@
   &--inner-page {
     line-height: 24px;
   }
-}
-
-.intro-block__img {
-  width: 280px;
-  height: 213px;
 }
 
 .intro-block__img--inner-page {
