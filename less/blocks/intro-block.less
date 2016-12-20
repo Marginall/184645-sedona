@@ -1,19 +1,6 @@
 .intro-block {
   position: relative;
-  padding-bottom: 42px;
   text-align: center;
-
-  &::before {
-    position: absolute;
-    bottom: -1px;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 37px;
-    background: transparent url("../../img/bg-triangle.svg") no-repeat;
-    background-size: cover;
-    z-index: 5;
-  }
 
   &--inner-page {
     padding-bottom: 0;
@@ -27,46 +14,38 @@
 .intro-block__poster {
   position: relative;
   width: 320px;
-  height: 386px;
-  margin-bottom: 42px;
   padding-top: 88px;
-  background: @transparent url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 50%;
-  background-size: cover;
+  background: @transparent url("../img/bg-back-mobile@1x.jpg") no-repeat center;
 
-  &::before {
+  &::after {
     position: absolute;
-    bottom: -1px;
+    bottom: 0;
     content: "";
     display: block;
-    width: 320px;
-    height: 26px;
-    background: transparent url("../../img/bg-intro-triangle-mobile.svg") no-repeat;
-    background-size: cover;
+    width: 100%;
+    height: 27px;
+    background: transparent url("../img/bg-intro-triangle-mobile.svg") no-repeat;
+    background-size: contain;
+    z-index: 5;
   }
 
   &--inner-page {
     position: relative;
     width: 320px;
     height: 190px;
-    margin-bottom: 6px;
     padding-top: 50px;
-    background: transparent url("../img/bg-back-mobile@1x.jpg") no-repeat 58% 118%;
-    background-size: 200% 200%;
-
-    &::before {
-      position: absolute;
-      bottom: 23px;
-      content: "";
-      display: block;
-      width: 320px;
-      height: 37px;
-      background: transparent url("../../img/bg-intro-triangle-mobile.svg") no-repeat;
-    }
+    background: transparent url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 100%;
+    background-size: cover;
   }
 }
 
+@media @retina {
+ .intro-block__poster {
+   background-image: url("../img/bg-back-mobile@2x.jpg");
+ }
+}
+
 .intro-block__title {
-  width: 258px;
   margin: auto;
   margin-bottom: 27px;
 
@@ -76,11 +55,9 @@
 }
 
 .intro-block__text {
-  width: 250px;
   margin: auto;
 
   &--inner-page {
-    width: 275px;
     line-height: 24px;
   }
 }
@@ -97,48 +74,44 @@
 
 @media @tablet-widths {
   .intro-block {
-    padding-bottom: 50px;
     border: none;
-
-    &::before {
-      display: none;
-    }
-
-    &--inner-page {
-      padding-bottom: 14px;
-    }
   }
 
   .intro-block__poster {
     width: 100%;
-    height: 520px;
     margin-bottom: 49px;
     padding-top: 77px;
+    padding-bottom: 70px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 57px;
+      background: transparent url("../img/bg-intro-triangle-tablet.svg") no-repeat;
+      background-size: contain;
+      z-index: 5;    }
 
     &--inner-page {
-      height: 359px;
-      margin-bottom: 6px;
       padding-top: 80px;
-      background-position: 49% 143%;
-      background-size: 132% 144%;
     }
   }
 
+  @media @retina {
+   .intro-block__poster {
+     background-image: url("../img/bg-back-tablet@2x.jpg");
+   }
+  }
+
   .intro-block__title {
-    width: 440px;
 
     &--inner-page {
       margin: 0 auto;
       margin-bottom: 31px;
       font-size: @large;
-    }
-  }
-
-  .intro-block__text {
-    width: 500px;
-
-    &--inner-page {
-      width: 440px;
     }
   }
 
@@ -155,39 +128,21 @@
 
 @media @desktop-widths {
   .intro-block {
-    padding-bottom: 50px;
-    overflow: hidden;
 
     &::before {
       display: none;
     }
-
-    &--inner-page {
-      padding-bottom: 59px;
-    }
-
-    &--gallery {
-      padding-bottom: 70px;
-    }
   }
 
   .intro-block__poster {
-
-    &--inner-page {
-      margin-bottom: 54px;
-      background-position: 49% 105%;
-      background-size: cover;
-
-      &::before {
-        left: 247px;
-        bottom: 0px;
-        width: 350px;
-        height: 115px;
-        background-size: cover;
-      }
-    }
+    background-image: url("../img/bg-back-desktop@1x.jpg");
   }
 
+  @media @retina {
+   .intro-block__poster {
+   background-image: url("../img/bg-back-desktop@2x.jpg");
+ }
+}
   .intro-block__img {
     width: 500px;
     height: 352px;

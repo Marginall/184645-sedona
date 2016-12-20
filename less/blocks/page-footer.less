@@ -11,21 +11,23 @@
   font-weight: 700;
 }
 
+.page-footer__copyright-box {
+  font-size: 0;
+}
+
 .page-footer__copyright {
-  position: relative;
-  display: block;
-  padding-right: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: @main-font;
 
   &::after {
-    position: absolute;
-    right: 90px;
-    top: -6px;
     content: "";
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     width: 40px;
     height: 35px;
+    margin-left: 5px;
     background: transparent url("../img/htmlacademy.svg") no-repeat;
-    background-size: cover;
   }
 }
 
@@ -44,7 +46,6 @@
   }
 
   .page-footer__copyright {
-    padding-top: 10px;
 
     &::after {
       right: -7px;
@@ -57,7 +58,7 @@
   .page-footer {
     padding-top: 37px;
     padding-left: 132px;
-    padding-right: 83px;
+    padding-right: 45px;
   }
 
   .page-footer__copyright {

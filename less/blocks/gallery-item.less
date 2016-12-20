@@ -49,12 +49,12 @@
 .gallery-item__likes {
   position: relative;
   margin: 0;
-  padding-left: 37px;
+  padding-left: 30px;
 
   &::before {
     position: absolute;
     left: 0;
-    top: -2px;
+    top: 0px;
     content: "";
     display: block;
     width: 22px;
@@ -67,7 +67,6 @@
   .gallery-item {
     width: 324px;
     padding: 0;
-    padding-bottom: 15px;
     background-color: @popup-wrap-color;
 
     &:first-child {
@@ -78,85 +77,48 @@
 
   .gallery-item__caption {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 30px;
   }
 
-  .gallery-item__text {
-      margin-left: 20px;
-    }
+  .gallery-item:first-child .gallery-item__caption {
+    padding-right: 20px;
+  }
 
-  .gallery-item__likes {
-    align-self: flex-end;
-    order: 1;
-    padding-right: 30px;
-    padding-left: 0;
+  .gallery-item__column--left {
+    flex-grow: 1;
+  }
 
-    &::before {
-      top: -1px;
-      left: -32px;
-    }
+  .gallery-item__column--right {
+    padding-top: 10px;
   }
 
   .gallery-item__author {
-    order: 2;
     margin: 0;
-    margin-left: 20px;
   }
 
 }
 
 @media @desktop-widths {
   .gallery-item {
+    position: relative;
     width: 400px;
     padding-bottom: 0;
   }
 
   .gallery-item__caption {
-    position: relative;
-    margin-top: -78px;
-    padding: 13px 0;
-    padding-bottom: 16px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 20px;
     background-color: rgba(0, 0, 0, 0.3);
-    z-index: 2;
-
-    &--big-img {
-      margin-top: -83px;
-      padding: 14px 0;
-    }
   }
 
   .gallery-item__text,
   .gallery-item__likes,
   .gallery-item__author {
     color: @white;
-  }
-
-  .gallery-item__text {
-    margin-left: 22px;
-  }
-
-  .gallery-item__author {
-    margin-left: 22px;
-  }
-
-  .gallery-item__likes {
-    align-self: flex-end;
-    margin-bottom: 1px;
-    padding-right: 29px;
-    padding-left: 0;
-
-    &--big-img {
-      padding-right: 31px;
-    }
-
-    &::before {
-      top: -1px;
-      left: -30px;
-    }
-  }
-
-  .gallery-item__link--big-img {
-    margin-bottom: 6px;
   }
 }
