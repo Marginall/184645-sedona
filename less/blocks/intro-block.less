@@ -4,6 +4,7 @@
 
   &--inner-page {
     padding-bottom: 0;
+    border-bottom: 1px solid @grey-border;
 
     &::before {
       display: none;
@@ -24,7 +25,7 @@
     content: "";
     display: block;
     width: 100%;
-    height: 27px;
+    height: 26px;
     background: transparent url("../img/bg-intro-triangle-mobile.svg") no-repeat;
     background-size: contain;
     z-index: 5;
@@ -33,9 +34,9 @@
   &--inner-page {
     position: relative;
     width: 320px;
-    height: 190px;
+    min-height: 158px;
     padding-top: 50px;
-    background: transparent url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 100%;
+    background: transparent url("../img/bg-back-mobile@1x.jpg") no-repeat 49% 99%;
     background-size: cover;
   }
 }
@@ -43,6 +44,15 @@
 .intro-block__text-wrapper {
   padding: 40px 30px;
   padding-bottom: 5px;
+
+  &--inner-page {
+    padding: 40px 20px;
+    padding-bottom: 27px;
+  }
+
+  &--form {
+    padding-bottom: 17px;
+  }
 }
 
 .intro-block__img {
@@ -80,14 +90,18 @@
 
 @media @tablet-widths {
   .intro-block {
+    margin-bottom: 50px;
     border: none;
+
+    &--inner-page {
+      margin-bottom: 15px;
+    }
   }
 
   .intro-block__poster {
     width: 100%;
-    margin-bottom: 49px;
     padding-top: 77px;
-    padding-bottom: 70px;
+    padding-bottom: 83px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
 
     &::after {
@@ -99,10 +113,11 @@
       height: 57px;
       background: transparent url("../img/bg-intro-triangle-tablet.svg") no-repeat;
       background-size: contain;
-      z-index: 5;    }
+      z-index: 5;
+    }
 
     &--inner-page {
-      padding-top: 80px;
+      padding-bottom: 93px;
     }
   }
 
@@ -110,6 +125,16 @@
    .intro-block__poster {
      background-image: url("../img/bg-back-tablet@2x.jpg");
    }
+  }
+
+  .intro-block__text-wrapper {
+    padding: 0 80px;
+    padding-top: 50px;
+
+    &--inner-page {
+      padding: 0 168px;
+      padding-top: 75px;
+    }
   }
 
   .intro-block__title {
@@ -142,13 +167,23 @@
 
   .intro-block__poster {
     background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: 20% 100%;
+
+   &--inner-page {
+     padding-bottom: 90px;
+   }
+
+    &::after {
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+    }
   }
 
   @media @retina {
    .intro-block__poster {
-   background-image: url("../img/bg-back-desktop@2x.jpg");
- }
-}
+     background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
   .intro-block__img {
     width: 500px;
     height: 352px;
@@ -156,6 +191,21 @@
     &--inner-page {
       width: 460px;
       height: 126px;
+    }
+  }
+
+  .intro-block__text-wrapper {
+    padding-left: 300px;
+    padding-right: 300px;
+
+    &--inner-page {
+      padding: 0 380px;
+      padding-top: 110px;
+      padding-bottom: 56px;
+    }
+
+    &--form {
+      padding-bottom: 45px;
     }
   }
 }

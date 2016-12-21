@@ -22,35 +22,45 @@
       <main class="form-page">
         <section class="intro-block intro-block--inner-page">
           <div class="intro-block__poster intro-block__poster--inner-page"><img class="intro-block__img intro-block__img--inner-page" src="img/text-sedona.svg" width="229" height="160" alt="Картинка"></div>
-          <h1 class="intro-block__title intro-block__title--inner-page global-title">Оставьте свой отзыв</h1>
-          <p class="intro-block__text intro-block__text--inner-page">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <div class="intro-block__text-wrapper intro-block__text-wrapper--inner-page intro-block__text-wrapper--form">
+            <h1 class="intro-block__title intro-block__title--inner-page global-title">Оставьте свой отзыв</h1>
+            <p class="intro-block__text intro-block__text--inner-page">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          </div>
         </section>
         <form class="form" action="echo.htmlacademy.ru" method="post">
           <div class="form__item">
             <h2 class="form__title global-title global-title--name">Представьтесь:</h2>
             <div class="field-text">
-              <label class="field-text__title" for="form-name">Имя<span class="field-text__decoration">*</span>:</label>
+              <label class="field-text__title" for="form-name">
+                <span class="field-text__text">Имя*:</span>
+              </label>
               <input class="field-text__input field-text__input--wide" id="form-name" type="text" value="Петр">
             </div>
             <div class="field-text">
-              <label class="field-text__title" for="form-surname">Фамилия<span class="field-text__decoration">*</span>:</label>
+              <label class="field-text__title" for="form-surname">
+                <span class="field-text__text">Фамилия*:</span>
+              </label>
               <input class="field-text__input field-text__input--narrow" id="form-surname" type="text" value="Иванов">
             </div>
             <div class="field-text">
-              <label class="field-text__title" for="form-patronymic">Отчество<span class="field-text__decoration">*</span>:</label>
+              <label class="field-text__title" for="form-patronymic">
+                <span class="field-text__text">Отчество*:</span>
+              </label>
               <input class="field-text__input field-text__input--narrow" id="form-patronymic" type="text" value="Александрович">
             </div>
           </div>
           <div class="form__item">
             <h2 class="form__title global-title global-title--contacts">Контактная информация:</h2>
             <div class="field-icon">
-              <label class="field-icon__title" for="form-tel"><span class="field-icon__title-disable">Контактный</span> телефон*:
+              <label class="field-icon__title">
+                <span class="field-icon__text"><span class="field-icon__title-disable">Контактный</span>телефон*:</span>
                 <input class="field-icon__input" type="tel" placeholder="Введите телефон">
               </label>
               <p class="input-error input-error--show">Ошибка, перепроверьте номер</p>
             </div>
             <div class="field-icon">
-              <label class="field-icon__title">Электронная почта*:
+              <label class="field-icon__title">
+                <span class="field-icon__text">Электронная почта*:</span>
                 <input class="field-icon__input" type="email" placeholder="Введите e-mail">
               </label>
               <p class="input-error">Ошибка, перепроверьте адресс</p>
@@ -77,17 +87,17 @@
           <div class="form__item">
             <h2 class="form__title global-title global-title--checkbox">Посещенные достопримечательности:</h2>
             <label class="form-checkbox">
-              <input class="form-checkbox__input" type="checkbox" value="1">
+              <input class="form-checkbox__input" type="checkbox" value="1" checked>
               <span class="form-checkbox__btn"></span>
               <span class="form-checkbox__text">Мост Дьявола</span>
             </label>
             <label class="form-checkbox">
-              <input class="form-checkbox__input" type="checkbox" value="2">
+              <input class="form-checkbox__input" type="checkbox" value="2" checked>
               <span class="form-checkbox__btn"></span>
               <span class="form-checkbox__text">Слайд-парк</span>
             </label>
             <label class="form-checkbox">
-              <input class="form-checkbox__input" type="checkbox" value="3">
+              <input class="form-checkbox__input" type="checkbox" value="3" checked>
               <span class="form-checkbox__btn"></span>
               <span class="form-checkbox__text">Гора-Колокол</span>
             </label>

@@ -24,9 +24,20 @@
   background: @bg-grey-icon url("../img/icon-mail.svg") no-repeat center;
 }
 
+.field-icon__text {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+  font-size: @main-font;
+}
+
 .field-icon__input {
   width: 100%;
-  padding: 18px 15px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 7px;
+  padding: 18px 20px;
+  padding-right: 60px;
   padding-top: 17px;
   color: @black;
   font-size: @middle-font;
@@ -39,7 +50,8 @@
 
 @media @tablet-widths {
   .field-icon {
-    margin-bottom: 20px;
+    position: relative;
+    margin-bottom: 23px;
 
     &:last-child {
       margin-bottom: 48px;
@@ -51,17 +63,25 @@
   }
 
   .field-icon__input {
-    margin-top: 6px;
+    margin-top: 7px;
+  }
+
+  .field-icon__text {
+    margin-left: 22px;
   }
 }
 
 @media @desktop-widths {
   .field-icon {
-    margin-right: 80px;
     margin-bottom: 0;
+    margin-right: 80px;
+
+    &:first-child {
+      flex-grow: 0;
+    }
 
     &:last-child {
-      margin-right: 0;
+      margin-right: 0px;
       margin-bottom: 0;
     }
   }
@@ -71,12 +91,14 @@
   }
 
   .field-icon__input {
-    width: 320px;
+    width: 316px;
     margin-top: 0;
-    margin-left: 8px;
+    margin-left: 12px;
+    vertical-align: middle;
   }
 
-  .field-icon:last-child .field-icon__input {
-
+   .field-icon__text {
+    margin-left: 0;
+    vertical-align: middle;
   }
 }

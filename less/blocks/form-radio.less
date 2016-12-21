@@ -1,7 +1,7 @@
 .form-radio {
   display: inline-block;
   vertical-align: middle;
-  margin-bottom: 43px;
+  margin-bottom: 13px;
   color: @black;
   font-size: 0;
   font-weight: 700;
@@ -10,7 +10,7 @@
   cursor: pointer;
 
   &:last-child {
-    margin-bottom: 18px;
+    margin-bottom: 0px;
   }
 }
 
@@ -44,18 +44,14 @@
 
 @media @tablet-widths {
   .form-radio {
-    margin-bottom: 52px;
+    margin-bottom: 22px;
 
     &:last-child {
       margin-bottom: 0;
     }
   }
 
-  .form-radio__indicator::before {
-    left: 3px;
-  }
-
-  .form-radio__indicator::after {
-    left: 21px;
+  .form-radio__text {
+    padding-left: 24px;
   }
 }
