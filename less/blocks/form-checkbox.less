@@ -61,6 +61,19 @@
   transform: rotate(-45deg);
 }
 
+.form-checkbox:hover .form-checkbox__btn {
+  background-color: @input-bg-hover;
+}
+
+.form-checkbox:active .form-checkbox__btn {
+  background-color: @input-bg-down;
+}
+
+.form-checkbox__input:checked:active + .form-checkbox__btn:after,
+.form-checkbox__input:checked:active + .form-checkbox__btn:before {
+  background-color: #a5a5a5;
+}
+
 @media @tablet-widths {
   .form-checkbox {
     width: 50%;

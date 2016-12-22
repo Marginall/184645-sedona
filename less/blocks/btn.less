@@ -19,7 +19,37 @@
     margin-top: 26px;
     padding: 15px 49px;
   }
+
+  &:hover {
+    background-color: @btn-hover;
+  }
+
+  &:active {
+    color: @btn-down-color;
+    background-color: @btn-down;
+  }
+
+  &:disabled {
+    background-color: @btn-disabled;
+  }
 }
+
+@keyframes progress {
+  0% {
+    background-color: @btn-down-color;
+  }
+
+  100% {
+    background-color: #3e84ae;
+  }
+}
+
+.btn--inprogress {
+  animation-name: progress;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
 
 @media @tablet-widths {
   .btn--form {

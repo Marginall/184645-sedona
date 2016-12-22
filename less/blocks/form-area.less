@@ -6,9 +6,19 @@
   font-size: @middle-font;
   font-weight: 700;
   text-transform: none;
-  background-color: @popup-wrap-color;
+  background-color: @input-bg;
   border: none;
   outline: none;
+}
+
+.form-area:hover {
+  background-color: @input-bg-hover;
+}
+
+.form-area:focus {
+  background-color: @white;
+  outline: 4px solid @input-outline;
+  outline-offset: -4px;
 }
 
 @media @tablet-widths {
