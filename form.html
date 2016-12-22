@@ -8,84 +8,103 @@
   <body class="page">
     <div class="page__wrapper">
       <header class="page-header">
-        <nav class="page-header__nav main-nav main-nav--show">
+        <nav class="main-nav main-nav--closed main-nav--no-js">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__item-link" href="index.html">Главная</a></li>
             <li class="main-nav__item"><a class="main-nav__item-link" href="gallery.html">Фото и видео</a></li>
             <li class="main-nav__item"><a class="main-nav__item-link main-nav__item-link--active">Форма отзыва</a></li>
             <li class="main-nav__item"><a class="main-nav__item-link" href="https://htmlacademy.ru">HTML academy</a></li>
           </ul>
+          <button class="main-nav__btn" type="button"></button>
         </nav>
-        <div class="header-logo"><a class="header-logo__link" href="index.html"><img class="header-logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona Logo"></a></div>
-        <button class="page-header__btn" type="button"></button>
+        <a class="header-logo" href="index.html"></a>
       </header>
       <main class="form-page">
         <section class="intro-block intro-block--inner-page">
           <div class="intro-block__poster intro-block__poster--inner-page"><img class="intro-block__img intro-block__img--inner-page" src="img/text-sedona.svg" width="229" height="160" alt="Картинка"></div>
-          <h1 class="intro-block__title intro-block__title--inner-page global-title">Оставьте свой отзыв</h1>
-          <p class="intro-block__text intro-block__text--inner-page">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <div class="intro-block__text-wrapper intro-block__text-wrapper--inner-page intro-block__text-wrapper--form">
+            <h1 class="intro-block__title intro-block__title--inner-page global-title">Оставьте свой отзыв</h1>
+            <p class="intro-block__text intro-block__text--inner-page">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          </div>
         </section>
         <form class="form" action="echo.htmlacademy.ru" method="post">
           <div class="form__item">
             <h2 class="form__title global-title global-title--name">Представьтесь:</h2>
             <div class="field-text">
-              <label class="field-text__title" for="form-name">Имя<span class="field-text__decoration">*</span>:</label>
+              <label class="field-text__title" for="form-name">
+                <span class="field-text__text">Имя*:</span>
+              </label>
               <input class="field-text__input field-text__input--wide" id="form-name" type="text" value="Петр">
             </div>
             <div class="field-text">
-              <label class="field-text__title" for="form-surname">Фамилия<span class="field-text__decoration">*</span>:</label>
+              <label class="field-text__title" for="form-surname">
+                <span class="field-text__text">Фамилия*:</span>
+              </label>
               <input class="field-text__input field-text__input--narrow" id="form-surname" type="text" value="Иванов">
             </div>
             <div class="field-text">
-              <label class="field-text__title" for="form-patronymic">Отчество<span class="field-text__decoration">*</span>:</label>
+              <label class="field-text__title" for="form-patronymic">
+                <span class="field-text__text">Отчество*:</span>
+              </label>
               <input class="field-text__input field-text__input--narrow" id="form-patronymic" type="text" value="Александрович">
             </div>
           </div>
           <div class="form__item">
             <h2 class="form__title global-title global-title--contacts">Контактная информация:</h2>
             <div class="field-icon">
-              <label class="field-icon__title" for="form-tel"><span class="field-icon__title-disable">Контактный</span> телефон*:</label>
-              <input class="field-icon__input" id="form-tel" type="tel" placeholder="Введите телефон">
+              <label class="field-icon__title">
+                <span class="field-icon__text"><span class="field-icon__title-disable">Контактный</span>телефон*:</span>
+                <input class="field-icon__input" type="tel" placeholder="Введите телефон">
+              </label>
               <p class="input-error input-error--show">Ошибка, перепроверьте номер</p>
             </div>
             <div class="field-icon">
-              <label class="field-icon__title" for="form-email">Электронная почта*:</label>
-              <input class="field-icon__input" id="form-email" type="email" placeholder="Введите e-mail">
+              <label class="field-icon__title">
+                <span class="field-icon__text">Электронная почта*:</span>
+                <input class="field-icon__input" type="email" placeholder="Введите e-mail">
+              </label>
               <p class="input-error">Ошибка, перепроверьте адресс</p>
             </div>
           </div>
           <div class="form__item">
             <h2 class="form__title global-title global-title--radio">ВАше Общее впечатление:</h2>
-            <label class="form-radio">Скорее положительное
+            <label class="form-radio">
               <input class="form-radio__input" type="radio" name="impression" value="yes" checked>
-              <span class="form-radio__indicator"></span>
+              <span class="form-radio__btn"></span>
+              <span class="form-radio__text">Скорее положительное</span>
             </label>
-            <label class="form-radio">Скорее отрицательное
+            <label class="form-radio">
               <input class="form-radio__input" type="radio" name="impression" value="no">
-              <span class="form-radio__indicator"></span>
+              <span class="form-radio__btn"></span>
+              <span class="form-radio__text">Скорее отрицательное</span>
             </label>
-            <label class="form-radio">Затрудняюсь ответить
+            <label class="form-radio">
               <input class="form-radio__input" type="radio" name="impression" value="none">
-              <span class="form-radio__indicator"></span>
+              <span class="form-radio__btn"></span>
+              <span class="form-radio__text">Затрудняюсь ответить</span>
             </label>
           </div>
           <div class="form__item">
             <h2 class="form__title global-title global-title--checkbox">Посещенные достопримечательности:</h2>
-            <label class="form-checkbox">Мост Дьявола
-              <input class="form-checkbox__input" type="checkbox" value="1">
-              <span class="form-checkbox__indicator"></span>
+            <label class="form-checkbox">
+              <input class="form-checkbox__input" type="checkbox" value="1" checked>
+              <span class="form-checkbox__btn"></span>
+              <span class="form-checkbox__text">Мост Дьявола</span>
             </label>
-            <label class="form-checkbox">Слайд-парк
-              <input class="form-checkbox__input" type="checkbox" value="2">
-              <span class="form-checkbox__indicator"></span>
+            <label class="form-checkbox">
+              <input class="form-checkbox__input" type="checkbox" value="2" checked>
+              <span class="form-checkbox__btn"></span>
+              <span class="form-checkbox__text">Слайд-парк</span>
             </label>
-            <label class="form-checkbox">Гора-Колокол
-              <input class="form-checkbox__input" type="checkbox" value="3">
-              <span class="form-checkbox__indicator form-checkbox__indicator--left"></span>
+            <label class="form-checkbox">
+              <input class="form-checkbox__input" type="checkbox" value="3" checked>
+              <span class="form-checkbox__btn"></span>
+              <span class="form-checkbox__text">Гора-Колокол</span>
             </label>
-            <label class="form-checkbox">Красные скалы
+            <label class="form-checkbox">
               <input class="form-checkbox__input" type="checkbox" value="4">
-              <span class="form-checkbox__indicator form-checkbox__indicator--left"></span>
+              <span class="form-checkbox__btn"></span>
+              <span class="form-checkbox__text">Красные скалы</span>
             </label>
           </div>
           <div class="form__item">
@@ -99,11 +118,11 @@
       <footer class="page-footer">
         <p class="page-footer__text">#visitSEDONA</p>
         <ul class="page-footer__list social-list">
-          <li class="social-list__item"><a class="social__link social__link--twit" href="#"></a></li>
-          <li class="social-list__item"><a class="social__link social__link--fb" href="#"></a></li>
-          <li class="social-list__item"><a class="social__link social__link--youtube" href="#"></a></li>
+          <li class="social-list__item"><a class="social-list__link social__link--twit" href="#"></a></li>
+          <li class="social-list__item"><a class="social-list__link social__link--fb" href="#"></a></li>
+          <li class="social-list__item"><a class="social-list__link social__link--youtube" href="#"></a></li>
         </ul>
-        <a class="page-footer__copyright" href="https://htmlacademy.ru/">Разработано</a>
+        <div class="page-footer__copyright-box"><a class="page-footer__copyright" href="https://htmlacademy.ru">Разработано</a></div>
       </footer>
       <section class="popup popup--failure">
         <h2 class="popup__title global-title popup__title--failure">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
@@ -111,12 +130,30 @@
         <button class="btn btn--small" type="button">Ok</button>
       </section>
       <section class="popup popup--succes">
-        <h2 class="popup__title global-title">Ваш отзыв отправлен!</h2>
-        <p class="popup__text popup__text--width">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <div class="popup-box">
+          <h2 class="popup__title global-title">Ваш отзыв отправлен!</h2>
+          <p class="popup__text popup__text--width">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
         <div class="popup__btn-wrap">
           <button class="btn btn--small" type="button">Закрыть окно</button>
         </div>
       </section>
     </div>
+    <script>
+      var navMain = document.querySelector(".main-nav");
+      var navBtn = document.querySelector(".main-nav__btn");
+
+      navMain.classList.remove("main-nav--no-js");
+
+      navBtn.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--show");
+        } else {
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--show");
+        }
+      });
+    </script>
   </body>
 </html>

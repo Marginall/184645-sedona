@@ -1,17 +1,16 @@
 .form-checkbox {
-  position: relative;
-  display: block;
-  width: auto;
-  margin-bottom: 54px;
-  padding-left: 79px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 24px;
   color: @black;
-  font-size: @middle-font;
+  font-size: 0;
   font-weight: 700;
+  text-align: left;
   text-transform: none;
   cursor: pointer;
 
   &:last-child {
-    margin-bottom: 16px;
+    margin-bottom: 0;
   }
 }
 
@@ -19,125 +18,120 @@
   display: none;
 }
 
-.form-checkbox__indicator {
+.form-checkbox__btn {
   position: absolute;
-  top: -13px;
-  left: 0;
-  display: block;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
   width: 56px;
   height: 56px;
-  background-color: #f2f2f2;
-  border: 5px solid #f2f2f2;
-
-  &::after {
-    position: absolute;
-    top: 45%;
-    left: 17px;
-    content: "";
-    display: none;
-    width: 20px;
-    height: 4px;
-    background-color: @black;
-    border-radius: 2px;
-    transform: rotate(-45deg);
-  }
-
-  &::before {
-    position: absolute;
-    top: 50%;
-    left: 11px;
-    content: "";
-    display: none;
-    width: 13px;
-    height: 4px;
-    background-color: @black;
-    border-radius: 2px;
-    transform: rotate(45deg);
-  }
+  background-color: @popup-wrap-color;
 }
 
-.form-checkbox__input:checked + .form-checkbox__indicator::after,
-.form-checkbox__input:checked + .form-checkbox__indicator::before {
+.form-checkbox__text {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 25px);
+  padding-left: 23px;
+  text-align: left;
+  font-size: @middle-font;
+}
+
+.form-checkbox__input:checked + .form-checkbox__btn::after {
+  position: absolute;
+  top: 30px;
+  left: 14px;
+  content: "";
   display: block;
+  width: 13px;
+  height: 4px;
+  background-color: @main-color;
+  transform: rotate(45deg);
 }
 
+.form-checkbox__input:checked + .form-checkbox__btn::before {
+  position: absolute;
+  top: 28px;
+  left: 20px;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 4px;
+  background-color: @main-color;
+  transform: rotate(-45deg);
+}
 
+.form-checkbox:hover .form-checkbox__btn {
+  background-color: @input-bg-hover;
+}
+
+.form-checkbox:active .form-checkbox__btn {
+  background-color: @input-bg-down;
+}
+
+.form-checkbox__input:checked:active + .form-checkbox__btn:after,
+.form-checkbox__input:checked:active + .form-checkbox__btn:before {
+  background-color: #a5a5a5;
+}
 
 @media @tablet-widths {
   .form-checkbox {
     width: 50%;
-    margin-bottom: 62px;
+    margin-bottom: 33px;
+    text-align: right;
 
     &:nth-child(2) {
       order: -1;
-      padding-left: 175px;
+      padding-left: 90px;
     }
     &:nth-child(3) {
       order: 1;
-      margin-top: -8px;
-      padding-left: 175px;
+      padding-left: 90px;
     }
     &:nth-child(4) {
       order: 0;
-      padding-left: 110px;
     }
     &:nth-child(5) {
       order: 2;
-      margin-bottom: 70px;
-      padding-left: 110px;
+      margin-bottom: 33px;
     }
   }
 
-  .form-checkbox__indicator {
-    left: 96px;
-
-    &--left {
-      left: 30px;
-    }
+  .form-checkbox__text {
+    padding-left: 26px;
   }
+
 }
 
 @media @desktop-widths {
   .form-checkbox {
-    width: 240px;
-    padding-left: 0px;
+    width: auto;
+    padding-right: 0;
 
     &:nth-child(2) {
       order: -1;
-      margin-top: -8px;
-      padding-left: 80px;
+      padding-left: 0px;
     }
 
     &:nth-child(3) {
       order: 1;
-      padding-left: 119px;
+      padding-left: 0px;
     }
 
     &:nth-child(4) {
       order: 0;
-      margin-top: -9px;
-      padding-left: 100px;
+      padding-left: 0px;
     }
 
     &:nth-child(5) {
       order: 2;
-      padding-left: 116px;
+      padding-left: 0px;
     }
   }
 
-  .form-checkbox:nth-child(2) .form-checkbox__indicator {
-    left: 0;
-  }
-
-  .form-checkbox:nth-child(3) .form-checkbox__indicator {
-    left: 38px;
-  }
-
-  .form-checkbox:nth-child(4) .form-checkbox__indicator {
-    left: 20px;
-  }
-
-  .form-checkbox:nth-child(5) .form-checkbox__indicator {
-    left: 33px;
+  .form-checkbox__text {
+    width: auto;
+    padding-left: 25px;
+    text-align: left;
   }
 }

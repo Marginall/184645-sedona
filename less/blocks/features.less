@@ -2,7 +2,12 @@
   text-align: center;
   background-color: @blue;
 
-  &--font-color {
+  &:first-child {
+    position: relative;
+  }
+
+  &--big {
+    width: 100%;
     color: @white;
   }
 }
@@ -14,8 +19,21 @@
   padding-bottom: 39px;
 
   &--top {
-    margin-top: -27px;
-    padding-top: 67px;
+    position: relative;
+    padding-top: 75px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 37px;
+      background: transparent url("../img/bg-triangle.svg") no-repeat;
+      background-size: cover;
+      z-index: 5;
+    }
   }
 
   &--color {
@@ -52,15 +70,16 @@
 }
 
 .features__image-block {
-  display: block;
+  position: relative;
   width: 320px;
   height: 260px;
+  overflow: hidden;
 }
 
 .features__image {
+  position: absolute;
+  top: 0px;
   display: block;
-  min-width: 320px;
-  height: 260px;
 }
 
 @media @tablet-widths {
@@ -76,9 +95,14 @@
   }
 
   .features__wrapper {
-    width: 256px;
-    padding-top: 45px;
-    padding-bottom: 41px;
+    width: 33%;
+    padding: 0 40px;
+    padding-top: 46px;
+    padding-bottom: 45px;
+
+    &--top::before {
+      display: none;
+    }
 
     &--color {
       flex-grow: 1;
@@ -92,11 +116,6 @@
     &--order {
       order: 3;
     }
-
-    &--top {
-      margin-top: 0;
-      padding-top: 46px;
-    }
   }
 
   .features__title {
@@ -105,12 +124,7 @@
   }
 
   .features__image-block {
-    width: 512px;
-    height: 256px;
-  }
-
-  .features__image {
-    width: 512px;
+    width: 67%;
     height: auto;
   }
 
@@ -119,13 +133,8 @@
   }
 
   .features__text {
-    width: 171px;
     margin: 0 auto;
     line-height: 21px;
-
-    &--narrow {
-      width: 147px;
-    }
   }
 
   .features__image-block--order {
@@ -135,40 +144,41 @@
 
 @media @desktop-widths {
   .features__wrapper {
-    width: 400px;
+    width: 33%;
+    padding: 0 60px;
     padding-top: 53px;
+    padding-bottom: 60px;
 
     &--color {
       padding-top: 45px;
-      padding-bottom: 66px;
+      padding-bottom: 63px;
     }
   }
 
   .features__image-block {
-    width: 800px;
+    width: 67%;
+  }
+
+  .features__image {
+    top: -72px;
+  }
+
+  .features:nth-child(2) .features__image {
+    top: -75px;
   }
 
   .features__title {
-    width: 151px;
     margin: 0 auto;
     margin-bottom: 15px;
 
     &--small {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      padding: 0 65px;
+      line-height: 25px;
     }
   }
 
   .features__text {
-    width: 278px;
     margin: 0 auto;
-
-    &--custum {
-      width: 225px;
-    }
-  }
-
-  .features__image {
-    width: 800px;
-    height: 256px;
   }
 }

@@ -1,79 +1,99 @@
 .field-icon {
+  font-size: 0;
+}
+
+.field-icon__title {
   position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: @main-font;
 
   &::after {
     position: absolute;
-    top: 32px;
     right: 0;
+    bottom: 0;
     content: "";
     display: block;
     width: 58px;
     height: 58px;
     background: @bg-grey-icon url("../img/icon-phone.svg") no-repeat center;
   }
+}
 
-  &:last-child::after {
-    background: @bg-grey-icon url("../img/icon-mail.svg") no-repeat center;
-  }
+.field-icon:last-child .field-icon__title::after {
+  background: @bg-grey-icon url("../img/icon-mail.svg") no-repeat center;
+}
+
+.field-icon__text {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+  font-size: @main-font;
 }
 
 .field-icon__input {
   width: 100%;
+  display: inline-block;
+  vertical-align: top;
   margin-top: 7px;
-  margin-bottom: 5px;
-  padding: 16px 22px;
-  padding-bottom: 18px;
+  padding: 18px 20px;
+  padding-right: 60px;
+  padding-top: 17px;
   color: @black;
   font-size: @middle-font;
   font-weight: 700;
   text-transform: none;
-  background-color: @popup-wrap-color;
+  background-color: @input-bg;
   border: none;
   outline: none;
-}
 
-.field-icon__title {
-  margin-left: 22px;
-  margin-bottom: 20px;
+  &:hover {
+    background-color: @input-bg-hover;
+  }
+
+  &:focus {
+    background-color: @white;
+    outline: 4px solid @input-outline;
+    outline-offset: -4px;
+  }
 }
 
 @media @tablet-widths {
   .field-icon {
-    margin-bottom: 20px;
+    position: relative;
+    margin-bottom: 23px;
 
     &:last-child {
       margin-bottom: 48px;
     }
   }
 
-  .field-icon__input {
+  .field-icon__title {
     width: 100%;
-    height: 58px;
-    margin-top: 6px;
+  }
+
+  .field-icon__input {
+    margin-top: 7px;
+  }
+
+  .field-icon__text {
+    margin-left: 22px;
   }
 }
 
 @media @desktop-widths {
   .field-icon {
-    display: flex;
-    flex-direction: row;
-    width: 400px;
+    margin-bottom: 0;
     margin-right: 80px;
 
+    &:first-child {
+      flex-grow: 0;
+    }
+
     &:last-child {
-      width: 480px;
-      margin-right: 0;
+      margin-right: 0px;
+      margin-bottom: 0;
     }
-
-    &::after {
-      top: 6px;
-    }
-  }
-
-  .field-icon__title {
-    margin-left: -1px;
-    margin-right: 17px;
-    padding-top: 24px;
   }
 
   .field-icon__title-disable {
@@ -81,10 +101,14 @@
   }
 
   .field-icon__input {
-    width: 317px;
-    margin-top: 7px;
+    width: 316px;
+    margin-top: 0;
+    margin-left: 12px;
+    vertical-align: middle;
+  }
 
-    &:last-child {
-    }
+   .field-icon__text {
+    margin-left: 0;
+    vertical-align: middle;
   }
 }

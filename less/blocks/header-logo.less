@@ -1,8 +1,27 @@
 .header-logo {
   position: absolute;
   left: 50%;
+  display: block;
   width: 102px;
   height: 83px;
   margin-left: -51px;
+  background: transparent url("../img/logo-sedona-mobile.svg") no-repeat;
   z-index: 1;
+}
+
+@media @tablet-widths {
+  .header-logo {
+    width: 102px;
+    height: 83px;
+    background-image: url("../img/logo-sedona-tablet.svg");
+  }
+}
+
+@media @desktop-widths {
+  .header-logo {
+    width: 188px;
+    height: 96px;
+    margin-left: -94px;
+    background-image: url("../img/logo-sedona-desktop.svg");
+  }
 }

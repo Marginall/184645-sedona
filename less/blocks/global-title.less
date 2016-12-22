@@ -13,11 +13,11 @@
   }
 
   &--radio {
-    margin-bottom: 38px;
+    margin-bottom: 22px;
   }
 
   &--checkbox {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 
   &--area {
@@ -42,8 +42,7 @@
     }
 
     &--color {
-      width: 151px;
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
 
     &--name {
@@ -53,12 +52,12 @@
 
     &--contacts {
       position: relative;
-      margin-bottom: 25px;
+      margin-bottom: 24px;
 
       &::after,
       &::before {
         position: absolute;
-        top: 13px;
+        top: 50%;
         content: "";
         display: block;
         width: 125px;
@@ -76,19 +75,19 @@
     }
 
     &--radio {
-      margin-bottom: 73px;
+      margin-bottom: 57px;
     }
 
     &--checkbox {
       position: relative;
       order: -2;
-      width: 60%;
-      margin-bottom: 56px;
+      margin-bottom: 40px;
+      padding: 0 140px;
 
       &::after,
       &::before {
         position: absolute;
-        top: 25px;
+        top: 50%;
         content: "";
         display: block;
         width: 125px;
@@ -97,11 +96,11 @@
       }
 
       &::after {
-        right: -130px;
+        right: 0px;
       }
 
       &::before {
-        left: -130px;
+        left: 0px;
       }
     }
 
@@ -112,7 +111,7 @@
       &::after,
       &::before {
         position: absolute;
-        top: 13px;
+        top: 50%;
         content: "";
         display: block;
         width: 125px;
@@ -134,15 +133,20 @@
 @media @desktop-widths {
   .global-title {
 
+    &--color {
+      margin-bottom: 6px;
+      padding: 0 30px;
+    }
+
     &--contacts {
       position: relative;
       width: 100%;
-      margin-bottom: 66px;
+      margin-bottom: 75px;
 
       &::after,
       &::before {
         position: absolute;
-        top: 11px;
+        top: 50%;
         content: "";
         display: block;
         width: 280px;
@@ -155,10 +159,14 @@
       }
     }
 
+    &--radio {
+      margin-bottom: 58px;
+    }
+
     &--checkbox {
       width: 100%;
-      margin-bottom: 56px;
-      padding: 0 290px;
+      margin-bottom: 40px;
+      padding: 0 280px;
 
       &::after{
         right: 0;

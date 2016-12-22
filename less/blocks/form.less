@@ -1,7 +1,6 @@
 .form {
   display: flex;
   flex-direction: column;
-  padding-top: 18px;
   padding-bottom: 38px;
 }
 
@@ -12,12 +11,16 @@
   box-sizing: border-box;
   padding: 20px;
   padding-top: 19px;
-  padding-bottom: 25px;
+  padding-bottom: 26px;
   border: none;
   border-top: 1px solid @grey-border;
 
+  &:nth-child(1) {
+    border: none;
+  }
+
   &:nth-child(3) {
-    padding-top: 17px;
+    padding-bottom: 28px;
   }
 }
 
@@ -44,26 +47,6 @@
 
 .form__title {
   margin-top: 0;
-
-  &--name {
-    margin-bottom: 21px;
-  }
-
-  &--contacts {
-    margin-bottom: 20px;
-  }
-
-  &--radio {
-    margin-bottom: 38px;
-  }
-
-  &--checkbox {
-    margin-bottom: 30px;
-  }
-
-  &--area {
-    margin-bottom: 16px;
-  }
 }
 
 .form__text {
@@ -95,18 +78,19 @@
     &:nth-child(2) {
       order: -1;
       width: 100%;
+      margin-bottom: 5px;
     }
 
     &:nth-child(3) {
       position: relative;
       order: -3;
-      width: 275px;
+      width: 280px;
       padding-top: 0;
 
       &::after {
         position: absolute;
         top: 5px;
-        right: -49px;
+        right: -44px;
         content: "";
         display: block;
         width: 1px;
@@ -122,12 +106,12 @@
       align-items: center;
       flex-wrap: wrap;
       margin: 0 auto;
-      margin-bottom: 14px;
+      margin-bottom: 36px;
     }
 
     &:nth-child(5) {
       width: 100%;
-      margin-bottom: 57px;
+      margin-bottom: 60px;
     }
   }
 
@@ -137,7 +121,6 @@
 
   .form__text {
     display: block;
-    padding-top: 5px;
   }
 }
 
@@ -151,6 +134,7 @@
   .form__item {
     &:nth-child(1) {
       width: 400px;
+      margin-bottom: 68px;
       padding-left: 0;
     }
 
@@ -158,10 +142,12 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      margin-bottom: 53px;
     }
 
     &:nth-child(3) {
       width: 432px;
+      padding-bottom: 0;
 
       &::after {
         right: -49px;
@@ -171,7 +157,7 @@
     &:nth-child(4) {
       justify-content: space-between;
       width: 100%;
-      margin-bottom: 12px;
+      margin-bottom: 35px;
     }
 
     &:nth-child(5) {
@@ -185,5 +171,9 @@
     &--custum::before {
       width: 30%;
     }
+  }
+
+  .form__text {
+    margin-top: 20px;
   }
 }
