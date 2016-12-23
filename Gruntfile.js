@@ -64,14 +64,14 @@ module.exports = function(grunt) {
 
     csso: {
       style: {
-         options: {
-           report: "gzip"
-         },
-         files: {
-           "build/css/style.min.css": ["build/css/style.css"]
-         }
-       }
-     },
+        options: {
+          report: "gzip"
+        },
+        files: {
+          "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
+    },
 
     imagemin: {
       images: {
@@ -145,5 +145,5 @@ module.exports = function(grunt) {
     "csso",
     "symbols",
     "imagemin"
-   ]);
+  ]);
 };
