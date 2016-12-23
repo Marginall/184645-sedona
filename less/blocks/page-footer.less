@@ -24,12 +24,23 @@
     content: "";
     display: inline-block;
     vertical-align: middle;
-    width: 40px;
-    height: 37px;
+    width: 27px;
+    height: 34px;
     margin-left: 10px;
-    background: transparent url("../img/htmlacademy.svg") no-repeat;
-    background-size: cover;
+    background: transparent url("../img/logo-htmlacademy.svg") no-repeat;
   }
+}
+
+.page-footer__copyright-box:hover .page-footer__copyright::after {
+  content: "";
+
+  display: inline-block;
+
+  vertical-align: middle;
+
+  width: 27px;
+  height: 34px;
+  background-image: url("../img/htmlacademy.svg");
 }
 
 @media @tablet-widths {
@@ -47,7 +58,6 @@
   }
 
   .page-footer__copyright {
-    padding-top: 5px;
 
     &::after {
       margin-left: 5px;
