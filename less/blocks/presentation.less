@@ -75,25 +75,50 @@
   cursor: pointer;
 }
 
+.presentation__toggle:hover {
+  background-color: @video-btn-hover;
+}
+
+.presentation__toggle:active {
+  background-color: @video-btn-down;
+}
+
 .presentation__replay {
   flex-grow: 1;
   width: 17px;
   height: 20px;
   margin-right: 40px;
-  background: transparent url("../img/icon-video-replay.svg") no-repeat;
+  background-color: transparent;
+  text-align: left;
 }
 
 .presentation__subtitles {
   width: 32px;
   height: 20px;
   margin-right: 30px;
-  background: transparent url("../img/icon-video-subtitles.svg") no-repeat;
+  background-color: transparent;
 }
 
 .presentation__fullscreen {
   width: 20px;
   height: 20px;
-  background: transparent url("../img/icon-video-fullscreen.svg") no-repeat;
+  background-color: transparent;
+}
+
+.presentation__icon {
+  fill: @video-btn;
+}
+
+.presentation__replay:hover .presentation__icon,
+.presentation__fullscreen:hover .presentation__icon,
+.presentation__subtitles:hover .presentation__icon {
+  fill: @video-btn-hover;
+}
+
+.presentation__replay:active .presentation__icon,
+.presentation__fullscreen:active .presentation__icon,
+.presentation__subtitles:active .presentation__icon {
+  fill: @video-btn-down;
 }
 
 @media @tablet-widths {
@@ -150,6 +175,10 @@
 
   .presentation__subtitles {
     margin-right: 42px;
+  }
+
+  .presentation__icon {
+    fill: #fff;
   }
 }
 

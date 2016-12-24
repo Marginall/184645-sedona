@@ -1,7 +1,6 @@
 .intro-block {
   position: relative;
   text-align: center;
-  overflow: hidden;
 
   &--inner-page {
     padding-bottom: 0;
@@ -22,12 +21,11 @@
 
   &::after {
     position: absolute;
-    left: -5px;
     bottom: 0;
     content: "";
     display: block;
-    width: 333px;
-    height: 28px;
+    width: 320px;
+    height: 27px;
     background: transparent url("../img/bg-intro-triangle-mobile.svg") no-repeat;
     background-size: contain;
     z-index: 5;
@@ -92,11 +90,11 @@
 
 @media @tablet-widths {
   .intro-block {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     border: none;
 
     &--inner-page {
-      margin-bottom: 15px;
+      padding-bottom: 15px;
     }
   }
 
@@ -109,10 +107,9 @@
     &::after {
       position: absolute;
       bottom: -3px;
-      left: -2px;
       content: "";
       display: block;
-      width: 772px;
+      width: 768px;
       height: 60px;
       background: transparent url("../img/bg-intro-triangle-tablet.svg") no-repeat;
       background-size: 100%;
@@ -177,8 +174,7 @@
    }
 
     &::after {
-      left: -3px;
-      width: 1205px;
+      width: 1200px;
       background-image: url("../img/bg-intro-triangle-desktop.svg");
     }
   }
