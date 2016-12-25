@@ -1,6 +1,7 @@
 .intro-block {
   position: relative;
   text-align: center;
+  overflow: hidden;
 
   &--inner-page {
     padding-bottom: 0;
@@ -21,11 +22,12 @@
 
   &::after {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
+    left: -2px;
     content: "";
     display: block;
-    width: 320px;
-    height: 26px;
+    width: 333px;
+    height: 28px;
     background: transparent url("../img/bg-intro-triangle-mobile.svg") no-repeat;
     background-size: contain;
     z-index: 5;
@@ -113,6 +115,7 @@
     &::after {
       position: absolute;
       bottom: -3px;
+      left: 0;
       content: "";
       display: block;
       width: 768px;
@@ -181,6 +184,7 @@
     }
 
     &::after {
+      left: 0;
       width: 1200px;
       background-image: url("../img/bg-intro-triangle-desktop.svg");
     }
