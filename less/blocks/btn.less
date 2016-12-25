@@ -15,9 +15,10 @@
   }
 
   &--form {
+    width: 280px;
     margin: 0 auto;
     margin-top: 26px;
-    padding: 15px 49px;
+    padding: 15px 20px;
   }
 
   &:hover {
@@ -32,36 +33,35 @@
   &:disabled {
     background-color: @btn-disabled;
   }
-}
 
-@keyframes progress {
-  0% {
-    background-color: @btn-down-color;
+  &--progress {
+    animation-name: progress;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
   }
 
-  100% {
-    background-color: #3e84ae;
+  @keyframes progress {
+    0% {
+      background-color: @btn-down-color;
+    }
+
+    100% {
+      background-color: #3e84ae;
+    }
   }
 }
-
-.btn--inprogress {
-  animation-name: progress;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-
 
 @media @tablet-widths {
   .btn--form {
+    width: 324px;
     margin: 0;
-    padding: 15px;
-    padding-left: 64px;
-    padding-right: 76px;
+    padding: 15px 20px;
   }
 }
 
 @media @desktop-widths {
   .btn--form {
-    padding: 16px 149px;
+    width: 480px;
+    padding: 16px 20px;
   }
 }

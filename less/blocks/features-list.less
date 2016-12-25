@@ -36,6 +36,10 @@
 .features-list__title {
   margin: 0;
   margin-bottom: 12px;
+
+  &--left {
+    text-align: left;
+  }
 }
 
 .features-list__text {
@@ -74,32 +78,34 @@
     }
   }
 
-  .features-list__icon--gift {
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 64px;
-    height: 75px;
-    margin: auto;
-  }
+  .features-list__icon {
 
-  .features-list__icon--house {
-    top: -3px;
-    right: 27px;
-    width: 75px;
-    height: 72px;
-    margin: auto;
-  }
+    &--gift {
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 64px;
+      height: 75px;
+      margin: auto;
+    }
 
-  .features-list__icon--burger {
-    top: 2px;
-    left: 0px;
-    right: 0;
-    width: 77px;
-    height: 68px;
-    margin: auto;
-  }
+    &--house {
+      top: -3px;
+      right: 27px;
+      width: 75px;
+      height: 72px;
+      margin: auto;
+    }
 
+    &--burger {
+      top: 2px;
+      left: 0px;
+      right: 0;
+      width: 77px;
+      height: 68px;
+      margin: auto;
+    }
+  }
 
   .features-list__title {
     margin-bottom: 22px;
@@ -112,6 +118,10 @@
 
     &--last {
       padding: 0 50px;
+    }
+
+    &--left {
+      text-align: center;
     }
   }
 }
