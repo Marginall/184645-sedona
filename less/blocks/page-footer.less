@@ -19,17 +19,23 @@
   display: inline-block;
   vertical-align: middle;
   font-size: @main-font;
+}
 
-  &::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 40px;
-    height: 37px;
-    margin-left: 10px;
-    background: transparent url("../img/htmlacademy.svg") no-repeat;
-    background-size: cover;
-  }
+.page-footer__copyright-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 34px;
+  margin-left: 10px;
+  fill: @black;
+}
+
+.page-footer__copyright:hover .page-footer__copyright-icon {
+  fill: @link-hover;
+}
+
+.page-footer__copyright:active .page-footer__copyright-icon {
+  fill: #b2b2b2;
 }
 
 @media @tablet-widths {
@@ -42,16 +48,14 @@
   }
 
   .page-footer__text {
+    display: flex;
+    align-items: center;
     margin-bottom: 0;
-    padding-top: 10px;
   }
 
-  .page-footer__copyright {
-    padding-top: 5px;
-
-    &::after {
-      margin-left: 5px;
-    }
+  .page-footer__copyright-box {
+    display: flex;
+    align-items: center;
   }
 }
 

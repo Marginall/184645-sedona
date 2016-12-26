@@ -7,6 +7,7 @@
   border-top: 1px solid @grey-border;
 
   &:first-child {
+    width: 100%;
     padding-top: 21px;
     border-top: none;
   }
@@ -38,6 +39,8 @@
 
 .gallery-item__link {
   display: block;
+  width: 280px;
+  overflow: hidden;
 }
 
 .gallery-item__author {
@@ -47,25 +50,12 @@
 }
 
 .gallery-item__likes {
-  position: relative;
   margin: 0;
-  padding-left: 35px;
-
-  &::before {
-    position: absolute;
-    left: 0;
-    top: 0px;
-    content: "";
-    display: block;
-    width: 22px;
-    height: 20px;
-    background: transparent url("../img/icon-like.svg") no-repeat;
-  }
+  margin-left: 15px;
 }
 
 @media @tablet-widths {
   .gallery-item {
-    width: 324px;
     padding: 0;
     background-color: @popup-wrap-color;
 
@@ -73,6 +63,14 @@
       width: 100%;
       padding-top: 0;
     }
+  }
+
+  .gallery-item__link {
+    width: 324px;
+  }
+
+  .gallery-item:first-child .gallery-item__link {
+    width: 648px;
   }
 
   .gallery-item__caption {
@@ -83,23 +81,45 @@
     padding-left: 20px;
     padding-right: 36px;
     padding-bottom: 18px;
+
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      flex-grow: 1;
+    }
   }
 
   .gallery-item:first-child .gallery-item__caption {
     padding-right: 20px;
   }
 
-  .gallery-item__column--left {
-    flex-grow: 1;
-    padding-right: 30px;
-  }
+  .gallery-item__column {
 
-  .gallery-item__column--right {
-    padding-top: 12px;
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      flex-grow: 1;
+    }
+
+    &:last-child {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
   }
 
   .gallery-item__likes {
-    padding-left: 30px;
+    margin-left: 15px;
+  }
+
+  .gallery-item__icon-color {
+    opacity: 0.3;
+  }
+
+  .gallery-item__column--right:hover .gallery-item__icon-color {
+    opacity: 1;
   }
 
   .gallery-item__author {
@@ -116,6 +136,14 @@
     padding-bottom: 0;
   }
 
+  .gallery-item__link {
+    width: 400px;
+  }
+
+  .gallery-item:first-child .gallery-item__link {
+    width: 1200px;
+  }
+
   .gallery-item__caption {
     position: absolute;
     bottom: 0;
@@ -130,5 +158,10 @@
   .gallery-item__likes,
   .gallery-item__author {
     color: @white;
+  }
+
+  .gallery-item__icon-color {
+    fill: @white;
+    opacity: 0.7;
   }
 }

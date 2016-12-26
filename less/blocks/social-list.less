@@ -18,17 +18,38 @@
 }
 
 .social-list__link {
+  position: relative;
   display: block;
   width: 46px;
   height: 48px;
-  background: #81b3d2 url("../img/icon-twitter.svg") no-repeat center;
+  background-color: @blue;
+}
 
-  &:nth-child(2) {
-    background-image: url("../img/icon-facebook.svg");
+.social-list__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  fill: #ffffff;
+
+  &--twit {
+    width: 18px;
+    height: 14px;
+    margin-left: -9px;
+    margin-top: -7px;
   }
 
-  &:nth-child(3) {
-    background-image: url("../img/icon-youtube.svg");
+  &--fb {
+    width: 9px;
+    height: 18px;
+    margin-left: -4px;
+    margin-top: -9px;
+  }
+
+  &--youtube {
+    width: 20px;
+    height: 14px;
+    margin-left: -10px;
+    margin-top: -7px;
   }
 }
 
@@ -38,6 +59,7 @@
 
 .social-list__link:active {
   background-color: @btn-down;
+  opacity: 0.3;
 }
 
 @media @tablet-widths {

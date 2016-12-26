@@ -10,6 +10,7 @@
 .presentation__title {
   margin: 0;
   margin-bottom: 26px;
+  text-align: center;
 }
 
 .presentation__text {
@@ -19,9 +20,14 @@
   text-align: center;
 }
 
+.presentation__image-wrapper {
+  width: 320px;
+  height: 200px;
+  overflow: hidden;
+}
+
 .presentation__video {
   display: block;
-  width: 100%;
 }
 
 .presentation__wrapper {
@@ -35,6 +41,7 @@
   width: 280px;
   margin: 0 auto;
   padding: 24px 25px;
+  padding-bottom: 15px;
   font-size: 0;
   background-color: @popup-wrap-color;
 }
@@ -66,8 +73,7 @@
 
 .presentation__toggle {
   position: absolute;
-  top: 19px;
-  left: 55px;
+  top: -3px;
   width: 9px;
   height: 9px;
   background-color: @white;
@@ -75,31 +81,61 @@
   cursor: pointer;
 }
 
-.presentation__replay {
+.presentation__toggle:hover {
+  background-color: @video-btn-hover;
+}
+
+.presentation__toggle:active {
+  background-color: @video-btn-down;
+}
+
+.presentation__btn-wrapper {
   flex-grow: 1;
-  width: 17px;
-  height: 20px;
-  margin-right: 40px;
-  background: transparent url("../img/icon-video-replay.svg") no-repeat;
+}
+
+.presentation__replay {
+  width: 40px;
+  height: 30px;
+  background-color: transparent;
 }
 
 .presentation__subtitles {
-  width: 32px;
-  height: 20px;
-  margin-right: 30px;
-  background: transparent url("../img/icon-video-subtitles.svg") no-repeat;
+  width: 50px;
+  height: 30px;
+  background-color: transparent;
 }
 
 .presentation__fullscreen {
-  width: 20px;
-  height: 20px;
-  background: transparent url("../img/icon-video-fullscreen.svg") no-repeat;
+  width: 40px;
+  height: 30px;
+  background-color: transparent;
+}
+
+.presentation__icon {
+  fill: @video-btn;
+}
+
+.presentation__replay:hover .presentation__icon,
+.presentation__fullscreen:hover .presentation__icon,
+.presentation__subtitles:hover .presentation__icon {
+  fill: @video-btn-hover;
+}
+
+.presentation__replay:active .presentation__icon,
+.presentation__fullscreen:active .presentation__icon,
+.presentation__subtitles:active .presentation__icon {
+  fill: @video-btn-down;
 }
 
 @media @tablet-widths {
   .presentation {
     padding: 67px 60px;
     padding-bottom: 40px;
+  }
+
+  .presentation__image-wrapper {
+    width: 648px;
+    height: 500px;
   }
 
   .presentation__text-wrapper {
@@ -119,13 +155,14 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 36px 35px;
+    padding: 30px 35px;
     background-color: rgba(0, 0, 0, 0.3);
   }
 
   .presentation__progress {
     position: static;
     display: inline-block;
+    vertical-align: middle;
     width: 389px;
     margin-right: 42px;
     padding: 0;
@@ -139,7 +176,6 @@
   }
 
   .presentation__toggle {
-    top: 42px;
     left: 189px;
   }
 
@@ -151,6 +187,10 @@
   .presentation__subtitles {
     margin-right: 42px;
   }
+
+  .presentation__icon {
+    fill: #fff;
+  }
 }
 
 @media @desktop-widths {
@@ -159,6 +199,11 @@
     padding-left: 200px;
     padding-right: 200px;
     padding-bottom: 75px;
+  }
+
+  .presentation__image-wrapper {
+    width: 800px;
+    height: 500px;
   }
 
   .presentation__text {
@@ -176,9 +221,5 @@
 
   .presentation__progress {
     width: 540px;
-  }
-
-  .presentation__toggle {
-    top: 43px;
   }
 }
